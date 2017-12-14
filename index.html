@@ -6,153 +6,147 @@
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
   
-  	
 	<style>
 
-	body { 
-		/*font-family: 'Audiowide', cursive;*/
-		/*font-family: 'Comfortaa', cursive;*/
-		/*font-family: 'Poiret One', cursive;*/
-		font-family: 'Open Sans', sans-serif;
-		background-color: #000; 
-		margin: 0; 
-		padding: 0; 
-		transition: background-color 100ms linear;
-		background-blend-mode: unset;
-		background-image:url("https://www.transparenttextures.com/patterns/gplay.png");
-	}
+		body { 
+			/*font-family: 'Audiowide', cursive;*/
+			/*font-family: 'Comfortaa', cursive;*/
+			/*font-family: 'Poiret One', cursive;*/
+			margin: 0; 
+			padding: 0; 
+			font-family: 'Open Sans', sans-serif;
+			background-color: #000; 
+			background-image:url("https://www.transparenttextures.com/patterns/gplay.png");
+			background-blend-mode: unset;
+		}
 
-	nav {
-		position: fixed;
-	    color: rgb(255, 255, 255);
-	    top: 0px;
-	    width: 100%;
-	    padding: 9px;
-	    height: 25px;
-		font-family: 'Comfortaa', cursive;
-	    font-size: 14pt;
-	    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
-	    background-color: #000;
-	    z-index: 1;}
+		nav {
+			position: fixed;
+		    top: 0px;
+		    width: 100%;
+		    padding: 9px;
+		    height: 25px;
+			font-family: 'Comfortaa', cursive;
+		    font-size: 14pt;
+		    color: #fff;
+		    background-color: #000;
+		    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+		    z-index: 1;
+		}
 
-	.hero { 
-		height: 200px; 
-		font-size: 60pt; 
-		margin: auto; 
-		margin-top: 150px; 
-		width: 400px; 
-		text-align: center;}
-	.hero-span { 
-		color: #fff;
-		font-family: 'Comfortaa', cursive;
-		text-shadow: 1px 0px 0px #123, 
-					 0px 1px 0px #123, 
-					 -1px 0px 0px #123, 
-					 0px -1px 0px #123;}
+		.hero { 
+			margin: auto; 
+			margin-top: 150px; 
+			height: 200px; 
+			width: 400px; 
+			font-size: 60pt; 
+			text-align: center;
+			font-family: 'Comfortaa', cursive;
+			color: #fff;
+			text-shadow: 1px 0px 0px #123, 
+						 0px 1px 0px #123, 
+						 -1px 0px 0px #123, 
+						 0px -1px 0px #123;
+		}
 
-	.team {
-		font-size: 20pt; 
-		width: 400px; 
-		text-align: center;
-		margin:auto;
-	}
-	.team-span {
-		color: #fff;
-		text-shadow: 1px 1px 10px #888;
-	}
+		.team {
+			font-size: 20pt; 
+			width: 400px; 
+			text-align: center;
+			margin:auto;
+			color: #fff;
+			text-shadow: 1px 1px 10px #888;
+		}
 
-	.coming-soon {
-		color: #fff;
-		text-shadow: 1px 1px 10px #888;
-		text-align: center;
-		margin:auto;
-		font-size: 14pt;
+		.bg-input { 
+			text-align: center;
+			margin: 100px auto 125px;
+			padding: 100px;
+			height: 200px; 
+			background-color: #444; 
+			border-radius: 2px;
+			box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)
+		}
 
-	}
+		.bg-input:hover {
+			/*opacity:.8;*/
+		}
 
-	.bg-input { 
-		background-color: #234; 
-		width: 388px; 
-		display: flex; 
-		opacity: .5; 
-		margin: auto; 
-		margin-top:100px;
-		margin-bottom:125px;
-		align-items: center; 
-		height: 54px; 
-		border-radius: 2px;
-		box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)}
+		.email-input { 
+			background: transparent; 
+			border: none; 
+			height: 50px; 
+			padding: 10px; 
+			width: 350px; 
+			color: #fff;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 12pt;
+			text-align: center;
+			border: 2px solid #888;
+			transition: border 200ms linear;
+		}
+		.email-input:focus {
+			outline: none;	
+			border: 2px solid #fff;
+		}
 
-	.bg-input:hover {
-		opacity:.8;
-	}
+		.email-submit { 
+			margin: 40px; 
+			padding: 0; 
+			width: 159px; 
+			height: 40px; 
+			font-family: 'Open Sans', sans-serif;
+			font-size: 12pt;
+			line-height: 1;
+			color: #ddd;
+			text-align: center; 
+			cursor: pointer; 
+			background-color: #444; 
+			border: 2px solid #888;
+			border-radius: 100px; 
+			outline: none; 
+			transition: border 200ms linear;
+		}
+		.email-submit:hover {
+			border: 2px solid #fff;
+		}
 
-	.email-input { 
-		background: transparent; 
-		border: none; 
-		height: 40px; 
-		padding: 10px; 
-		width: 254px; 
-		color: #fff;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 12pt;}
-	.email-input:focus {
-		outline: none;	}
+		footer {
+			height: 100px;
+			background-color: #000;
+			margin-top: 250px;
+		}
 
-	.email-submit { 
-		background-color: #123; 
-		color: #fff;
-		text-align: center; 
-		border-radius: 5px; 
-		width: 126px; 
-		height: 38px; 
-		outline: none; 
-		padding: 0; 
-		margin: 0; 
-		cursor: pointer; 
-		border: 0px; 
-		transition: background 200ms ease-out;
-		font-family: 'Open Sans', sans-serif;
-		font-size: 10pt;}
-	.email-submit:hover {
-		background-color: #012;}
+		.footer {
+			padding: 40px;
+		    height: 150px;
+		    color: #fff;
+		    margin-top: 20px;
+		    background-color: #000;
+		    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+		}
 
-	footer {
-		height: 100px;
-		background-color: #000;
-		margin-top: 250px;
-	}
-
-	.footer {
-		padding: 40px;
-	    height: 150px;
-	    color: #fff;
-	    margin-top: 20px;
-	    background-color: #000;
-	    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
-	}
-
-	.explanation {
-		margin:100px;
-		margin-bottom: 60px;
-	    height: 150px;
-	    padding: 40px;
-	    border-radius: 2px;
-	    opacity: .9;
-	    color: #000;
-	    background-color: #fff;
-	    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
-	}
-	.explanation > p {
-	    font-weight: 100!important;
-	    display: inline-block;
-	    float: right;
-	    width: 75%;
-	}
-	h4 {
-		display: inline-block;
-   		width: 25%;
-	}
+		.explanation {
+			margin:100px;
+			margin-bottom: 60px;
+		    height: 150px;
+		    padding: 40px;
+		    border-radius: 2px;
+		    opacity: .9;
+		    color: #000;
+		    background-color: #fff;
+		    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+		}
+		.explanation > p {
+		    font-weight: 100!important;
+		    display: inline-block;
+		    float: right;
+		    width: 75%;
+		}
+		h4 {
+			display: inline-block;
+	   		width: 25%;
+		}
 	</style>
 
 	</head>
@@ -161,17 +155,17 @@
 			doxa
 		</nav>
 		<div class="hero">
-			<span class="hero-span">doxa</span>
+			<span>doxa</span>
 		</div>
 
 		<div class="team">
-			<span class="team-span"> <em>Choose your Voice </em></span>
+			<span> <em>Choose your Voice </em></span>
 		</div>
 		
 		<div class="sign-up">
 			<div class="bg-input">
 				<div class="input-wrapper">
-					<input class="email-input" type="email" placeholder="Type your email"></input>
+					<input class="email-input" type="email" placeholder="Email Address"></input>
 				</div>
 				<div class="button-wrapper">
 					<button class="email-submit"><span>Sign up for beta</span></button>
@@ -194,6 +188,8 @@
 			<p>About us</p>
 			<p>Team</p>
 			<p>FAQ</p>
+
+			Copyright © Doxa Team
 		</footer>
 	</body>
 </html>
