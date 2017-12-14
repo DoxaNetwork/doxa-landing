@@ -1,0 +1,444 @@
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:300,400|Roboto|Audiowide" rel="stylesheet">
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  
+  	
+	<style>
+
+	body { 
+		/*font-family: 'Audiowide', cursive;*/
+		/*font-family: 'Comfortaa', cursive;*/
+		/*font-family: 'Poiret One', cursive;*/
+		font-family: 'Open Sans', sans-serif;
+		background-color: #000; 
+		margin: 0; 
+		padding: 0; 
+		transition: background-color 100ms linear;
+		background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+		background-blend-mode: unset;
+		background-image:url("https://www.transparenttextures.com/patterns/bright-squares.png");
+		/*background-blend-mode: color-burn;*/
+		background-image:url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+		background-image:url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
+		background-image:url("https://www.transparenttextures.com/patterns/gplay.png");
+	}
+
+	nav {
+		position: fixed;
+	    color: rgb(255, 255, 255);
+	    top: 0px;
+	    width: 100%;
+	    padding: 9px;
+	    height: 25px;
+		font-family: 'Comfortaa', cursive;
+
+
+	    font-size: 14pt;
+	    /*box-shadow: #0d0d0d 1px 1px 10px;*/
+	    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+	    background-color: #012;
+	    z-index: 1;}
+
+	.hero { 
+		/*font-family: 'Audiowide', cursive;*/
+		height: 200px; 
+		font-size: 60pt; 
+		margin: auto; 
+		margin-top: 150px; 
+		width: 400px; 
+		text-align: center;}
+	.hero-span { 
+		color: #fff;
+		/*text-shadow: 1px 1px 10px #888;}*/
+		font-family: 'Comfortaa', cursive;
+		/*font-family: 'Audiowide', cursive;*/
+		text-shadow: 1px 0px 0px #123, 
+					 0px 1px 0px #123, 
+					 -1px 0px 0px #123, 
+					 0px -1px 0px #123;}
+
+	.team {
+		display: none;
+		font-size: 20pt; 
+		width: 400px; 
+		text-align: center;
+		margin:auto;
+	}
+	.team-span {
+		color: #fff;
+		text-shadow: 1px 1px 10px #888;
+	}
+
+	.coming-soon {
+		color: #fff;
+		text-shadow: 1px 1px 10px #888;
+		text-align: center;
+		margin:auto;
+		font-size: 14pt;
+
+	}
+
+	.bg-input { 
+		background-color: #234; 
+		width: 388px; 
+		display: flex; 
+		opacity: .5; 
+		margin: auto; 
+		margin-top:100px;
+		margin-bottom:125px;
+		align-items: center; 
+		height: 54px; 
+		border-radius: 2px;
+		box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)}
+		/*box-shadow: 1px 1px 15px 1px #0d0d0d;}*/
+
+	.bg-input:hover {
+		opacity:.8;
+	}
+
+	.email-input { 
+		background: transparent; 
+		border: none; 
+		height: 40px; 
+		padding: 10px; 
+		width: 254px; 
+		color: #fff;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 12pt;}
+	.email-input:focus {
+		outline: none;	}
+
+	.email-submit { 
+		background-color: #123; 
+		color: #fff;
+		text-align: center; 
+		border-radius: 5px; 
+		width: 126px; 
+		height: 38px; 
+		outline: none; 
+		padding: 0; 
+		margin: 0; 
+		cursor: pointer; 
+		border: 0px; 
+		transition: background 200ms ease-out;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 10pt;}
+	.email-submit:hover {
+		background-color: #012;}
+
+	.sides {
+		display: flex;
+		justify-content: center;
+		margin: 40px;}
+	.side {
+		height:100px;
+		width: 162px;
+		border-radius: 2px;
+		margin:10px;
+		box-shadow: 1px 1px 15px 1px #0d0d0d;
+		opacity: .5;
+		cursor: pointer;
+		transition: all 150ms linear;
+	}
+
+	.side:hover {
+		transition: all 150ms linear;
+	}
+
+
+	.selected {
+		opacity: 1;
+	}
+
+	.yellow.selected {
+		box-shadow: 1px 1px 5px 1px #ff0, -1px -1px 5px 1px #ff0;
+	}
+	.cyan.selected {
+		box-shadow: 1px 1px 5px 1px #0ff, -1px -1px 5px 1px #0ff;
+	}
+	.magenta.selected {
+		box-shadow: 1px 1px 5px 1px #f0f, -1px -1px 5px 1px #f0f;
+	}
+
+	.red.selected {
+		box-shadow: 1px 1px 5px 1px #f00, -1px -1px 5px 1px #f00;
+	}
+	.green.selected {
+		box-shadow: 1px 1px 5px 1px #0f0, -1px -1px 5px 1px #0f0;
+	}
+	.blue.selected {
+		box-shadow: 1px 1px 5px 1px #00f, -1px -1px 5px 1px #00f;
+	}
+
+
+	.green:hover {
+		box-shadow: 1px 1px 10px 1px #0f0,-1px -1px 10px 1px #0f0;
+		opacity: 1;
+	}
+	.blue:hover {
+		box-shadow: 1px 1px 10px 1px #00f, -1px -1px 10px 1px #00f;
+		opacity: 1;
+	}
+	.red:hover {
+		box-shadow: 1px 1px 10px 1px #f00, -1px -1px 10px 1px #f00;
+		opacity: 1;
+	}
+
+	.magenta:hover {
+		box-shadow: 1px 1px 10px 1px #f0f,-1px -1px 10px 1px #f0f;
+		opacity: 1;
+	}
+	.cyan:hover {
+		box-shadow: 1px 1px 10px 1px #0ff, -1px -1px 10px 1px #0ff;
+		opacity: 1;
+	}
+	.yellow:hover {
+		box-shadow: 1px 1px 10px 1px #ff0, -1px -1px 10px 1px #ff0;
+		opacity: 1;
+	}
+	footer {
+		height: 100px;
+		background-color: #ddd;
+		margin-top: 250px;
+	}
+
+	.footer {
+		padding: 40px;
+	    height: 150px;
+	    color: #fff;
+	    margin-top: 20px;
+	    background-color: #012;
+	    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+	}
+
+	.explanation {
+		margin:100px;
+		margin-bottom: 60px;
+	    height: 150px;
+	    padding: 40px;
+	    border-radius: 2px;
+	    opacity: .9;
+	    color: #000;
+	    background-color: #fff;
+	    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
+	}
+	.explanation > p {
+		    font-weight: 100!important;
+		    /* line-height: 1.8; */
+		    /* font-size: 22pt; */
+		    display: inline-block;
+		    float: right;
+		    width: 75%;
+	}
+	h4 {
+		display: inline-block;
+    width: 25%;
+	}
+	</style>
+
+	</head>
+	<body>
+		<nav>
+			doxa
+		</nav>
+		<div class="hero">
+			<span class="hero-span">doxa</span>
+		</div>
+
+		<div class="team">
+			<span class="team-span"> <em>Choose your Voice </em></span>
+		</div>
+		<div class="sides">
+			<div class="red side" style="background-color: #f00"></div>
+			<div class="yellow side" style="background-color: #ff0"></div>
+			<div class="green side" style="background-color: #0f0"></div>
+			<div class="cyan side" style="background-color: #0ff"></div>
+			<div class="blue side" style="background-color: #00f"></div>
+			<div class="magenta side" style="background-color: #f0f"></div>
+		</div>
+
+		
+		<div class="sign-up">
+			<div class="bg-input">
+				<div class="input-wrapper">
+					<input class="email-input" type="email" placeholder="Type your email"></input>
+				</div>
+				<div class="button-wrapper">
+					<button class="email-submit"><span>Sign up for beta</span></button>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div class="explanation">
+				<h4>What is this?</h4>
+				<p>A cooperative publishing platform run by paid curators who are elected by community members. Our content curation network utilizes tokens </p>
+			</div>
+			<div class="explanation">
+				<h4>Why?</h4>
+				<p>A cooperative publishing platform run by paid curators who are elected by community members. Our content curation network utilizes tokens for community membership, delegated token-weighted voting for decision making, and token payment to reward high-quality work. On this platform users will be able to create independent communities and tune the incentive and voting structures to encourage particular types of content. </p>
+			</div>
+
+		<!-- <div class="coming-soon">
+			<span class="coming-soon-span"> Coming in 2018<br>Powered by the Ethereum world computer </span>
+		</div> -->
+
+		<footer class="footer">
+			<p>About us</p>
+			<p>Team</p>
+			<p>FAQ</p>
+
+		</footer>
+
+	</body>
+	<script>
+		function changeColor(x,y) {
+			if (!window.x) {
+				window.x = x;
+				window.y = y;
+				window.r = 16;
+				window.g = 32;
+				window.b = 48;
+				window.rDecreasing = false;
+				window.bDecreasing = false;
+				window.gDecreasing = false;
+			}
+
+			if(window.r > 195) {
+				window.rDecreasing = true;
+			}
+			if(window.r < 0) {
+				window.rDecreasing = false;
+			}
+
+			if(window.b > 195) {
+				window.bDecreasing = true;
+			}
+			if(window.b < 0) {
+				window.bDecreasing = false;
+			}
+			if(window.g > 195) {
+				window.gDecreasing = true;
+			}
+			if(window.g < 0) {
+				window.gDecreasing = false;
+			}
+
+
+			var deltaX = Math.abs(x - window.x);
+  			var deltaY = Math.abs(y - window.y);
+			deltaZ = (deltaX + deltaY) / 2;
+
+  			if (window.rDecreasing) {
+  				deltaX = -deltaX;
+  			}
+
+  			if (window.bDecreasing) {
+  				deltaY = -deltaY;
+  			}
+  			if (window.gDecreasing) {
+  				deltaZ = -deltaZ;
+  			}
+
+
+  			
+
+  			var deltaR = deltaX / window.innerWidth / 48 * 256;
+  			var deltaB = deltaY / window.innerHeight / 48 * 256;
+  			var deltaG = deltaZ / window.innerHeight / 48 * 256;
+
+
+  			r = parseInt(window.r + deltaR);
+  			b = parseInt(window.b + deltaB);
+  			g = parseInt(window.g + deltaG);
+
+  			var newColor = `rgb(${r}, ${g}, ${b})`;
+
+  			$('body').css('background-color', newColor);
+		}
+
+  		// $('html').mousemove(function(event){changeColor(event.screenX, event.screenY)})
+
+  		// $('.sides').mousemove(function(event){event.preventDefault(); return false;})
+
+  		// $('body').hover(function(){
+  		// 	console.log('hover');
+  		// 	$('body').css('background-color','#123');
+  		// })
+
+  		$('.side').click(function(el){
+  			$('.side').removeClass('selected');
+  			// $('.side').css('opacity', 0.5);
+  			// $('.side').css('box-shadow', 'none');
+
+  			$(el.currentTarget).addClass('selected');
+  			// var color = $(el.currentTarget).css('background-color');
+  			// $(el.currentTarget).css('opacity', 1);
+  			// $(el.currentTarget).css('box-shadow', `1px 1px 15px 1px ${color},-1px -1px 15px 1px ${color}`);
+  			// $('.side').css('background-color', color);
+  		})
+
+  		// $('.blue').hover(function(){
+  		// 	$('body').css('background-color','#00c');
+  		// 	window.r = 32;
+  		// 	window.g = 32;
+  		// 	window.b = 195;
+  		// 	return false;
+  		// }, function() {
+  		// 	$('body').css('background-color', '#123');``
+  		// })
+
+  		// $('.red').hover(function(){
+  		// 	$('body').css('background-color','#c00');
+  		// 	window.r = 195;
+  		// 	window.g = 32;
+  		// 	window.b = 32;
+  		// 	return false;
+  		// }, function() {
+  		// 	$('body').css('background-color', '#123');``
+  		// })
+
+  		// $('.green').hover(function(){
+  		// 	$('body').css('background-color','#0c0');
+  		// 	window.r = 32;
+  		// 	window.g = 195;
+  		// 	window.b = 32;
+  		// 	return false;
+  		// }, function() {
+  		// 	$('body').css('background-color', '#123');``
+  		// })
+  		// $('.cyan').hover(function(){
+  		// 	$('body').css('background-color','#0cc');
+  		// 	window.r = 32;
+  		// 	window.g = 195;
+  		// 	window.b = 195;
+  		// 	return false;
+  		// }, function() {
+  		// 	$('body').css('background-color', '#123');``
+  		// })
+  		// $('.magenta').hover(function(){
+  		// 	$('body').css('background-color','#c0c');
+  		// 	window.r = 195;
+  		// 	window.g = 32;
+  		// 	window.b = 195;
+  		// 	return false;
+  		// }, function() {
+  		// 	$('body').css('background-color', '#123');``
+  		// })
+  		// $('.yellow').hover(function(){
+  		// 	$('body').css('background-color','#cc0');
+  		// 	window.r = 195;
+  		// 	window.g = 195;
+  		// 	window.b = 32;
+  		// 	return false;
+  		// }, function() {
+  		// 	$('body').css('background-color', '#123');``
+  		// })
+
+
+  	</script>
+</html>
