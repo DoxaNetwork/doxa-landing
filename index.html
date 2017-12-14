@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:300,400|Roboto|Audiowide" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:300,400" rel="stylesheet">
 		<script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -18,12 +18,7 @@
 		margin: 0; 
 		padding: 0; 
 		transition: background-color 100ms linear;
-		background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
 		background-blend-mode: unset;
-		background-image:url("https://www.transparenttextures.com/patterns/bright-squares.png");
-		/*background-blend-mode: color-burn;*/
-		background-image:url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
-		background-image:url("https://www.transparenttextures.com/patterns/diagonal-striped-brick.png");
 		background-image:url("https://www.transparenttextures.com/patterns/gplay.png");
 	}
 
@@ -35,16 +30,12 @@
 	    padding: 9px;
 	    height: 25px;
 		font-family: 'Comfortaa', cursive;
-
-
 	    font-size: 14pt;
-	    /*box-shadow: #0d0d0d 1px 1px 10px;*/
 	    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
-	    background-color: #012;
+	    background-color: #000;
 	    z-index: 1;}
 
 	.hero { 
-		/*font-family: 'Audiowide', cursive;*/
 		height: 200px; 
 		font-size: 60pt; 
 		margin: auto; 
@@ -53,9 +44,7 @@
 		text-align: center;}
 	.hero-span { 
 		color: #fff;
-		/*text-shadow: 1px 1px 10px #888;}*/
 		font-family: 'Comfortaa', cursive;
-		/*font-family: 'Audiowide', cursive;*/
 		text-shadow: 1px 0px 0px #123, 
 					 0px 1px 0px #123, 
 					 -1px 0px 0px #123, 
@@ -94,7 +83,6 @@
 		height: 54px; 
 		border-radius: 2px;
 		box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)}
-		/*box-shadow: 1px 1px 15px 1px #0d0d0d;}*/
 
 	.bg-input:hover {
 		opacity:.8;
@@ -202,7 +190,7 @@
 	}
 	footer {
 		height: 100px;
-		background-color: #ddd;
+		background-color: #000;
 		margin-top: 250px;
 	}
 
@@ -211,7 +199,7 @@
 	    height: 150px;
 	    color: #fff;
 	    margin-top: 20px;
-	    background-color: #012;
+	    background-color: #000;
 	    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 	}
 
@@ -227,16 +215,14 @@
 	    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);
 	}
 	.explanation > p {
-		    font-weight: 100!important;
-		    /* line-height: 1.8; */
-		    /* font-size: 22pt; */
-		    display: inline-block;
-		    float: right;
-		    width: 75%;
+	    font-weight: 100!important;
+	    display: inline-block;
+	    float: right;
+	    width: 75%;
 	}
 	h4 {
 		display: inline-block;
-    width: 25%;
+   		width: 25%;
 	}
 	</style>
 
@@ -282,163 +268,12 @@
 				<h4>Why?</h4>
 				<p>A cooperative publishing platform run by paid curators who are elected by community members. Our content curation network utilizes tokens for community membership, delegated token-weighted voting for decision making, and token payment to reward high-quality work. On this platform users will be able to create independent communities and tune the incentive and voting structures to encourage particular types of content. </p>
 			</div>
-
-		<!-- <div class="coming-soon">
-			<span class="coming-soon-span"> Coming in 2018<br>Powered by the Ethereum world computer </span>
-		</div> -->
+		</div>
 
 		<footer class="footer">
 			<p>About us</p>
 			<p>Team</p>
 			<p>FAQ</p>
-
 		</footer>
-
 	</body>
-	<script>
-		function changeColor(x,y) {
-			if (!window.x) {
-				window.x = x;
-				window.y = y;
-				window.r = 16;
-				window.g = 32;
-				window.b = 48;
-				window.rDecreasing = false;
-				window.bDecreasing = false;
-				window.gDecreasing = false;
-			}
-
-			if(window.r > 195) {
-				window.rDecreasing = true;
-			}
-			if(window.r < 0) {
-				window.rDecreasing = false;
-			}
-
-			if(window.b > 195) {
-				window.bDecreasing = true;
-			}
-			if(window.b < 0) {
-				window.bDecreasing = false;
-			}
-			if(window.g > 195) {
-				window.gDecreasing = true;
-			}
-			if(window.g < 0) {
-				window.gDecreasing = false;
-			}
-
-
-			var deltaX = Math.abs(x - window.x);
-  			var deltaY = Math.abs(y - window.y);
-			deltaZ = (deltaX + deltaY) / 2;
-
-  			if (window.rDecreasing) {
-  				deltaX = -deltaX;
-  			}
-
-  			if (window.bDecreasing) {
-  				deltaY = -deltaY;
-  			}
-  			if (window.gDecreasing) {
-  				deltaZ = -deltaZ;
-  			}
-
-
-  			
-
-  			var deltaR = deltaX / window.innerWidth / 48 * 256;
-  			var deltaB = deltaY / window.innerHeight / 48 * 256;
-  			var deltaG = deltaZ / window.innerHeight / 48 * 256;
-
-
-  			r = parseInt(window.r + deltaR);
-  			b = parseInt(window.b + deltaB);
-  			g = parseInt(window.g + deltaG);
-
-  			var newColor = `rgb(${r}, ${g}, ${b})`;
-
-  			$('body').css('background-color', newColor);
-		}
-
-  		// $('html').mousemove(function(event){changeColor(event.screenX, event.screenY)})
-
-  		// $('.sides').mousemove(function(event){event.preventDefault(); return false;})
-
-  		// $('body').hover(function(){
-  		// 	console.log('hover');
-  		// 	$('body').css('background-color','#123');
-  		// })
-
-  		$('.side').click(function(el){
-  			$('.side').removeClass('selected');
-  			// $('.side').css('opacity', 0.5);
-  			// $('.side').css('box-shadow', 'none');
-
-  			$(el.currentTarget).addClass('selected');
-  			// var color = $(el.currentTarget).css('background-color');
-  			// $(el.currentTarget).css('opacity', 1);
-  			// $(el.currentTarget).css('box-shadow', `1px 1px 15px 1px ${color},-1px -1px 15px 1px ${color}`);
-  			// $('.side').css('background-color', color);
-  		})
-
-  		// $('.blue').hover(function(){
-  		// 	$('body').css('background-color','#00c');
-  		// 	window.r = 32;
-  		// 	window.g = 32;
-  		// 	window.b = 195;
-  		// 	return false;
-  		// }, function() {
-  		// 	$('body').css('background-color', '#123');``
-  		// })
-
-  		// $('.red').hover(function(){
-  		// 	$('body').css('background-color','#c00');
-  		// 	window.r = 195;
-  		// 	window.g = 32;
-  		// 	window.b = 32;
-  		// 	return false;
-  		// }, function() {
-  		// 	$('body').css('background-color', '#123');``
-  		// })
-
-  		// $('.green').hover(function(){
-  		// 	$('body').css('background-color','#0c0');
-  		// 	window.r = 32;
-  		// 	window.g = 195;
-  		// 	window.b = 32;
-  		// 	return false;
-  		// }, function() {
-  		// 	$('body').css('background-color', '#123');``
-  		// })
-  		// $('.cyan').hover(function(){
-  		// 	$('body').css('background-color','#0cc');
-  		// 	window.r = 32;
-  		// 	window.g = 195;
-  		// 	window.b = 195;
-  		// 	return false;
-  		// }, function() {
-  		// 	$('body').css('background-color', '#123');``
-  		// })
-  		// $('.magenta').hover(function(){
-  		// 	$('body').css('background-color','#c0c');
-  		// 	window.r = 195;
-  		// 	window.g = 32;
-  		// 	window.b = 195;
-  		// 	return false;
-  		// }, function() {
-  		// 	$('body').css('background-color', '#123');``
-  		// })
-  		// $('.yellow').hover(function(){
-  		// 	$('body').css('background-color','#cc0');
-  		// 	window.r = 195;
-  		// 	window.g = 195;
-  		// 	window.b = 32;
-  		// 	return false;
-  		// }, function() {
-  		// 	$('body').css('background-color', '#123');``
-  		// })
-
-
-  	</script>
 </html>
