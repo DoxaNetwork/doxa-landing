@@ -1,10 +1,14 @@
 <html>
 	<head>
-		<link href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:300,400" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa:300|Open+Sans:300,400" rel="stylesheet">
 		<script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
   crossorigin="anonymous"></script>
+  	<script
+  	src="https://cdn.jsdelivr.net/npm/triangulr@1.0.0/triangulr.js"
+  	integrity="sha256-nmGk1n+BTtdh5SQ4oNtKuyfbbpvF53reG1BD2vwQROk="
+  	crossorigin="anonymous"></script>
   
 	<style>
 
@@ -18,6 +22,8 @@
 			background-color: #000; 
 			/*background-image:url("https://www.transparenttextures.com/patterns/gplay.png");*/
 			background-blend-mode: unset;
+			/*background: linear-gradient(to bottom right, #04c , #0c4);*/
+			background: linear-gradient(to bottom right, #000 , #35a1ef);
 		}
 
 		nav {
@@ -30,24 +36,25 @@
 			font-family: 'Comfortaa', cursive;
 		    font-size: 2em;
 		    color: #fff;
-		    background-color: #000;
+		    /*background-color: #1b252d;*/
+		    background-color: #102334;
 		    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 		    z-index: 1;
 		}
 
 		.hero { 
 			margin: auto; 
-			margin-top: 150px; 
+			margin-top: 275px; 
 			height: 200px; 
 			/*width: 400px; */
 			font-size: 6em; 
 			text-align: center;
 			font-family: 'Comfortaa', cursive;
 			color: #fff;
-			text-shadow: 1px 0px 0px #123, 
+			/*text-shadow: 1px 0px 0px #123, 
 						 0px 1px 0px #123, 
 						 -1px 0px 0px #123, 
-						 0px -1px 0px #123;
+						 0px -1px 0px #123;*/
 		}
 
 		.team {
@@ -60,10 +67,11 @@
 		}
 
 		.bg-input { 
+			opacity:0.5;
 			text-align: center;
-			margin: 100px auto 0px;
+			/*margin: 100px auto 0px;*/
 			padding: 100px;
-			height: 200px; 
+			height: 100px; 
 			background-color: #444; 
 			border-radius: 2px;
 			box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)
@@ -112,18 +120,12 @@
 			border: 2px solid #fff;
 		}
 
-		footer {
-			height: 100px;
-			background-color: #000;
-			margin-top: 250px;
-		}
-
 		.footer {
 			padding: 40px;
 		    height: 150px;
 		    color: #fff;
-		    margin-top: 20px;
-		    background-color: #000;
+		    /*margin-top: 20px;*/
+			background-color: #123;
 		    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 		}
 
@@ -167,19 +169,70 @@
 			color: #888;
 			font-size: 0.9em;
 		}
+
+		svg {
+		    z-index: -5;
+		    position: relative;
+		    top: -597px;
+		    opacity: .5;
+		    height: 842px;
+		    width: 100%;
+		    overflow: hidden;
+		}
+
+		.top {
+			height: 472px;
+		}
+
+		nav > svg {
+			left: -5px;
+			height: 141px;
+			width: 100%;
+			top: -138px;
+			opacity: .5;
+		}
+
+		.right {
+			margin-right:40px;
+			margin-top:5px;
+			float:right;
+			font-size:.5em;
+			cursor:pointer;
+			transition: color 200ms linear;
+		}
+		.right:hover {
+			color: #5b7990;
+			transition: none;
+		}
 	</style>
 
 	</head>
 	<body>
-		<nav>
-			doxa
+		<nav id="triangle2">
+			<span>
+				doxa
+			</span>
+			<span class="right">
+				Why
+			</span>
+			<span class="right">
+				How
+			</span>
+			<span class="right">
+				Uses
+			</span>
+			<span class="right">
+				Blog
+			</span>
 		</nav>
-		<div class="hero">
-			<span>vote better</span>
-		</div>
+		<div class="top" id="triangle">
+			<div class="hero">
+				<span>vote better</span>
+			</div>
 
-		<div class="team">
-			<span>A blockchain-based curation platform</span>
+			<div class="team">
+				<span>A blockchain-based curation platform</span>
+			</div>
 		</div>
 		
 		<div class="sign-up">
@@ -233,6 +286,16 @@
 				</div>
 			</div>
 		</div>
+		<div class="sign-up" id='triangle'>
+			<div class="bg-input">
+				<div class="input-wrapper">
+					<input class="email-input" type="email" placeholder="Email Address"></input>
+				</div>
+				<div class="button-wrapper">
+					<button class="email-submit"><span>Sign up for beta</span></button>
+				</div>
+			</div>
+		</div>
 
 		<footer class="footer">
 			<p>About us</p>
@@ -243,3 +306,17 @@
 		</footer>
 	</body>
 </html>
+<script>
+	var colorGenerator = function (path) {
+  var random = 20;
+  var ratio = (path.x * path.y) / (path.cols * path.lines);
+  // var code = Math.floor(255 - (ratio * (255-random)) - Math.random()*random).toString(16);
+  var code = Math.floor(16 + (ratio * (256-random)) + Math.random()*random).toString(16);
+  return '#'+code+code+code;
+};
+	var mySVG = new Triangulr (1142, 842, 120, 60, colorGenerator);
+	var cln = mySVG.cloneNode(true);
+	// var mySVG = new Triangulr (1142, 842, 120, 60);
+document.getElementById('triangle').appendChild(mySVG);
+document.getElementById('triangle2').appendChild(cln);
+</script>
