@@ -9,6 +9,9 @@
   	src="https://cdn.jsdelivr.net/npm/triangulr@1.0.0/triangulr.js"
   	integrity="sha256-nmGk1n+BTtdh5SQ4oNtKuyfbbpvF53reG1BD2vwQROk="
   	crossorigin="anonymous"></script>
+
+  	<script
+  	src="https://cdn.jsdelivr.net/npm/animejs@2.2.0/anime.js"></script>
   
 	<style>
 
@@ -22,8 +25,9 @@
 			background-color: #000; 
 			/*background-image:url("https://www.transparenttextures.com/patterns/gplay.png");*/
 			background-blend-mode: unset;
-			/*background: linear-gradient(to bottom right, #04c , #0c4);*/
-			background: linear-gradient(to bottom right, #000 , #35a1ef);
+			background: linear-gradient(to bottom right, #000033 , #880033);
+			/*background: linear-gradient(to bottom right, #1b0033 , #a30033)*/
+			/*background: linear-gradient(to bottom right, #000 , #35a1ef);*/
 		}
 
 		nav {
@@ -174,10 +178,14 @@
 		    z-index: -5;
 		    position: relative;
 		    top: -597px;
-		    opacity: .5;
+		    /*opacity: .01;*/
 		    height: 842px;
 		    width: 100%;
 		    overflow: hidden;
+		}
+
+		path {
+			/*opacity:0.5;*/
 		}
 
 		.top {
@@ -312,11 +320,98 @@
   var ratio = (path.x * path.y) / (path.cols * path.lines);
   // var code = Math.floor(255 - (ratio * (255-random)) - Math.random()*random).toString(16);
   var code = Math.floor(16 + (ratio * (256-random)) + Math.random()*random).toString(16);
-  return '#'+code+code+code;
+  var code2 = (100-code).toString(16);
+
+  // return '#'+code+code+code;
+
+
+
+  // good
+  // purple into red
+  return '#'+code+'00'+'33';
+  // blue into green
+  return '#'+'00'+code+'33';
+
+
+  //bad
+  //red into green
+  return '#'+'55'+code+'00';
+  //green into blue
+  return '#'+'00'+'55'+code;
 };
 	var mySVG = new Triangulr (1142, 842, 120, 60, colorGenerator);
 	var cln = mySVG.cloneNode(true);
 	// var mySVG = new Triangulr (1142, 842, 120, 60);
 document.getElementById('triangle').appendChild(mySVG);
 document.getElementById('triangle2').appendChild(cln);
+
+//long delay and short duration - jumpy, fast tiles
+// anime({
+//   targets: $('path').toArray(),
+//   opacity: '0.1',
+//   // duration: 1000,
+//   loop: true,
+//   direction: 'alternate',
+//   easing: 'easeInSine',
+//   delay: function(el, i, l) {
+//     return i * 100 + Math.random()*200;
+//   },
+//   // duration: 300
+//   duration: function(el, i, l) {
+//     return 10 + (i * 1);
+//   }
+// });
+//shorter delay and longer duration - whole rows together
+anime({
+  targets: $('#triangle path').toArray(),
+  opacity: '0.1',
+  // duration: 1000,
+  loop: true,
+  direction: 'alternate',
+  easing: 'easeInSine',
+  delay: function(el, i, l) {
+    return i * 100 + Math.random()*200;
+  },
+  // duration: 300
+  duration: function(el, i, l) {
+    return 10 + (i * 10);
+  }
+});
+
+// var basicTimeline = anime.timeline({
+// 	autoplay: true,
+// 	loop:true
+// });
+
+// basicTimeline.add({
+//   targets: $('path').toArray(),
+//   opacity: '0.5',
+//   // duration: 1000,
+//   // loop: true,
+//   // direction: 'alternate',
+//   easing: 'linear',
+//   delay: function(el, i, l) {
+//     return i * 10 + Math.random()*200;
+//   },
+//   // duration: 300
+//   duration: function(el, i, l) {
+//     return 100 + (i * 10);
+//   }
+// });
+// basicTimeline.add({
+//   targets: $('path').toArray(),
+//   // fill: '#fff',
+//   opacity: '0.01',
+//   // duration: 1000,
+//   // loop: true,
+//   // direction: 'alternate',
+//   easing: 'linear',
+//   delay: function(el, i, l) {
+//     return (l-i) * 10 + Math.random()*200;
+//   },
+//   // duration: 300
+//   duration: function(el, i, l) {
+//     return 100 + ((l-i) * 10);
+//   }
+// });
 </script>
