@@ -1,219 +1,160 @@
 <html>
 	<head>
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa:300|Open+Sans:300,400" rel="stylesheet">
-		<script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
-  	<script
-  	src="https://cdn.jsdelivr.net/npm/triangulr@1.0.0/triangulr.js"
-  	integrity="sha256-nmGk1n+BTtdh5SQ4oNtKuyfbbpvF53reG1BD2vwQROk="
-  	crossorigin="anonymous"></script>
-
-  	<script
-  	src="https://cdn.jsdelivr.net/npm/animejs@2.2.0/anime.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  		crossorigin="anonymous"></script>
+  		<script
+  		src="https://cdn.jsdelivr.net/npm/triangulr@1.0.0/triangulr.js"
+  		integrity="sha256-nmGk1n+BTtdh5SQ4oNtKuyfbbpvF53reG1BD2vwQROk="
+  		crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/animejs@2.2.0/anime.js"></script>
   
-	<style>
+		<style>
+			body { 
+				margin: 0; 
+				padding: 0; 
+				font-family: 'Open Sans', sans-serif;
+				background-color: #000; 
+				background: linear-gradient(to bottom right, #000033 , #880033);
+			}
+			nav {
+				position: fixed;
+			    top: 0px;
+			    width: 100%;
+			    padding: 10px 5px;
+			    line-height: 1;
+			    height: 25px;
+				font-family: 'Comfortaa', cursive;
+			    font-size: 2em;
+			    color: #fff;
+			    background-color: #102334;
+			    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			    z-index: 1;
+			}
+			.hero { 
+				margin: auto; 
+				margin-top: 275px; 
+				height: 200px; 
+				font-size: 6em; 
+				text-align: center;
+				font-family: 'Comfortaa', cursive;
+				color: #fff;
+			}
+			.team {
+				font-size: 1.2em; 
+				width: 400px; 
+				text-align: center;
+				margin:auto;
+				color: #fff;
+			}
+			.bg-input { 
+				opacity:0.5;
+				text-align: center;
+				padding: 100px;
+				height: 100px; 
+				background-color: #444; 
+				border-radius: 2px;
+				box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)
+			}
+			.email-input { 
+				background: transparent; 
+				border: none; 
+				height: 50px; 
+				padding: 10px; 
+				width: 350px; 
+				color: #fff;
+				font-family: 'Open Sans', sans-serif;
+				font-size: 1.1em;
+				text-align: center;
+				border: 2px solid #888;
+				transition: border 200ms linear;
+			}
+			.email-input:focus {
+				outline: none;	
+				border: 2px solid #fff;
+			}
+			.email-submit { 
+				margin: 40px; 
+				padding: 0; 
+				width: 159px; 
+				height: 40px; 
+				font-family: 'Open Sans', sans-serif;
+				font-size: 1em;
+				line-height: 1;
+				color: #ddd;
+				text-align: center; 
+				cursor: pointer; 
+				background-color: #444; 
+				border: 2px solid #888;
+				border-radius: 100px; 
+				outline: none; 
+				transition: border 200ms linear;
+			}
+			.email-submit:hover {
+				border: 2px solid #fff;
+			}
+			.footer {
+				padding: 40px;
+			    height: 150px;
+			    color: #fff;
+				background-color: #123;
+			    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			}
+			.explanation {
+			    padding: 40px;
+			    color: #000;
+			    text-align: center;
+			    background-color: #fff;
+			}
+			.grid-cell {
+				width: 34%;
+				text-align: center;
+			}
+			.grid {
+				flex-wrap: wrap;
+			    display: flex;
+			    justify-content: space-around;
 
-		body { 
-			/*font-family: 'Audiowide', cursive;*/
-			/*font-family: 'Comfortaa', cursive;*/
-			/*font-family: 'Poiret One', cursive;*/
-			margin: 0; 
-			padding: 0; 
-			font-family: 'Open Sans', sans-serif;
-			background-color: #000; 
-			/*background-image:url("https://www.transparenttextures.com/patterns/gplay.png");*/
-			background-blend-mode: unset;
-			background: linear-gradient(to bottom right, #000033 , #880033);
-			/*background: linear-gradient(to bottom right, #1b0033 , #a30033)*/
-			/*background: linear-gradient(to bottom right, #000 , #35a1ef);*/
-		}
-
-		nav {
-			position: fixed;
-		    top: 0px;
-		    width: 100%;
-		    padding: 10px 5px;
-		    line-height: 1;
-		    height: 25px;
-			font-family: 'Comfortaa', cursive;
-		    font-size: 2em;
-		    color: #fff;
-		    /*background-color: #1b252d;*/
-		    background-color: #102334;
-		    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
-		    z-index: 1;
-		}
-
-		.hero { 
-			margin: auto; 
-			margin-top: 275px; 
-			height: 200px; 
-			/*width: 400px; */
-			font-size: 6em; 
-			text-align: center;
-			font-family: 'Comfortaa', cursive;
-			color: #fff;
-			/*text-shadow: 1px 0px 0px #123, 
-						 0px 1px 0px #123, 
-						 -1px 0px 0px #123, 
-						 0px -1px 0px #123;*/
-		}
-
-		.team {
-			font-size: 1.2em; 
-			width: 400px; 
-			text-align: center;
-			margin:auto;
-			color: #fff;
-			/*text-shadow: 1px 1px 10px #888;*/
-		}
-
-		.bg-input { 
-			opacity:0.5;
-			text-align: center;
-			/*margin: 100px auto 0px;*/
-			padding: 100px;
-			height: 100px; 
-			background-color: #444; 
-			border-radius: 2px;
-			box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)
-		}
-
-		.bg-input:hover {
-			/*opacity:.8;*/
-		}
-
-		.email-input { 
-			background: transparent; 
-			border: none; 
-			height: 50px; 
-			padding: 10px; 
-			width: 350px; 
-			color: #fff;
-			font-family: 'Open Sans', sans-serif;
-			font-size: 1.1em;
-			text-align: center;
-			border: 2px solid #888;
-			transition: border 200ms linear;
-		}
-		.email-input:focus {
-			outline: none;	
-			border: 2px solid #fff;
-		}
-
-		.email-submit { 
-			margin: 40px; 
-			padding: 0; 
-			width: 159px; 
-			height: 40px; 
-			font-family: 'Open Sans', sans-serif;
-			font-size: 1em;
-			line-height: 1;
-			color: #ddd;
-			text-align: center; 
-			cursor: pointer; 
-			background-color: #444; 
-			border: 2px solid #888;
-			border-radius: 100px; 
-			outline: none; 
-			transition: border 200ms linear;
-		}
-		.email-submit:hover {
-			border: 2px solid #fff;
-		}
-
-		.footer {
-			padding: 40px;
-		    height: 150px;
-		    color: #fff;
-		    /*margin-top: 20px;*/
-			background-color: #123;
-		    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
-		}
-
-		.explanation {
-			/*margin:100px;*/
-			/*margin-bottom: 60px;*/
-		    /*height: 150px;*/
-		    padding: 40px;
-		    /*border-radius: 2px;*/
-		    /*opacity: .9;*/
-		    color: #000;
-		    text-align: center;
-		    background-color: #fff;
-
-		    /*box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.12), 0px 2px 2px 0px rgba(0,0,0,0.24);*/
-		}
-
-		.grid-cell {
-			width: 34%;
-			text-align: center;
-		}
-		.explanation > p {
-		    font-weight: 100!important;
-		    display: inline-block;
-		    float: right;
-		    width: 75%;
-		}
-
-		.grid {
-			flex-wrap: wrap;
-		    display: flex;
-		    justify-content: space-around;
-
-		}
-		h4 {
-			display: inline-block;
-	   		width: 25%;
-		}
-
-		p {
-			color: #888;
-			font-size: 0.9em;
-		}
-
-		svg {
-		    z-index: -5;
-		    position: relative;
-		    top: -597px;
-		    /*opacity: .01;*/
-		    height: 842px;
-		    width: 100%;
-		    overflow: hidden;
-		}
-
-		path {
-			/*opacity:0.5;*/
-		}
-
-		.top {
-			height: 472px;
-		}
-
-		nav > svg {
-			left: -5px;
-			height: 141px;
-			width: 100%;
-			top: -138px;
-			opacity: .5;
-		}
-
-		.right {
-			margin-right:40px;
-			margin-top:5px;
-			float:right;
-			font-size:.5em;
-			cursor:pointer;
-			transition: color 200ms linear;
-		}
-		.right:hover {
-			color: #5b7990;
-			transition: none;
-		}
-	</style>
-
+			}
+			h4 {
+				display: inline-block;
+		   		width: 25%;
+			}
+			p {
+				color: #888;
+				font-size: 0.9em;
+			}
+			svg {
+			    z-index: -5;
+			    position: relative;
+			    top: -597px;
+			    height: 842px;
+			    width: 100%;
+			    overflow: hidden;
+			}
+			nav > svg {
+				left: -5px;
+				height: 141px;
+				width: 100%;
+				top: -138px;
+				opacity: .5;
+			}
+			.top {
+				height: 472px;
+			}
+			.right {
+				margin-right:40px;
+				margin-top:5px;
+				float:right;
+				font-size:.5em;
+				cursor:pointer;
+				transition: color 200ms linear;
+			}
+			.right:hover {
+				color: #5b7990;
+				transition: none;
+			}
+		</style>
 	</head>
 	<body>
 		<nav id="triangle2">
@@ -294,7 +235,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="sign-up" id='triangle'>
+		<div class="sign-up">
 			<div class="bg-input">
 				<div class="input-wrapper">
 					<input class="email-input" type="email" placeholder="Email Address"></input>
@@ -316,102 +257,31 @@
 </html>
 <script>
 	var colorGenerator = function (path) {
-  var random = 20;
-  var ratio = (path.x * path.y) / (path.cols * path.lines);
-  // var code = Math.floor(255 - (ratio * (255-random)) - Math.random()*random).toString(16);
-  var code = Math.floor(16 + (ratio * (256-random)) + Math.random()*random).toString(16);
-  var code2 = (100-code).toString(16);
+	  var random = 20;
+	  var ratio = (path.x * path.y) / (path.cols * path.lines);
+	  // var code = Math.floor(255 - (ratio * (255-random)) - Math.random()*random).toString(16);
+	  var code = Math.floor(16 + (ratio * (256-random)) + Math.random()*random).toString(16);
+	  return '#'+code+'00'+'33';
+	};
 
-  // return '#'+code+code+code;
-
-
-
-  // good
-  // purple into red
-  return '#'+code+'00'+'33';
-  // blue into green
-  return '#'+'00'+code+'33';
-
-
-  //bad
-  //red into green
-  return '#'+'55'+code+'00';
-  //green into blue
-  return '#'+'00'+'55'+code;
-};
 	var mySVG = new Triangulr (1142, 842, 120, 60, colorGenerator);
+
 	var cln = mySVG.cloneNode(true);
-	// var mySVG = new Triangulr (1142, 842, 120, 60);
-document.getElementById('triangle').appendChild(mySVG);
-document.getElementById('triangle2').appendChild(cln);
+	document.getElementById('triangle').appendChild(mySVG);
+	document.getElementById('triangle2').appendChild(cln);
 
-//long delay and short duration - jumpy, fast tiles
-// anime({
-//   targets: $('path').toArray(),
-//   opacity: '0.1',
-//   // duration: 1000,
-//   loop: true,
-//   direction: 'alternate',
-//   easing: 'easeInSine',
-//   delay: function(el, i, l) {
-//     return i * 100 + Math.random()*200;
-//   },
-//   // duration: 300
-//   duration: function(el, i, l) {
-//     return 10 + (i * 1);
-//   }
-// });
-//shorter delay and longer duration - whole rows together
-anime({
-  targets: $('#triangle path').toArray(),
-  opacity: '0.1',
-  // duration: 1000,
-  loop: true,
-  direction: 'alternate',
-  easing: 'easeInSine',
-  delay: function(el, i, l) {
-    return i * 100 + Math.random()*200;
-  },
-  // duration: 300
-  duration: function(el, i, l) {
-    return 10 + (i * 10);
-  }
-});
-
-// var basicTimeline = anime.timeline({
-// 	autoplay: true,
-// 	loop:true
-// });
-
-// basicTimeline.add({
-//   targets: $('path').toArray(),
-//   opacity: '0.5',
-//   // duration: 1000,
-//   // loop: true,
-//   // direction: 'alternate',
-//   easing: 'linear',
-//   delay: function(el, i, l) {
-//     return i * 10 + Math.random()*200;
-//   },
-//   // duration: 300
-//   duration: function(el, i, l) {
-//     return 100 + (i * 10);
-//   }
-// });
-// basicTimeline.add({
-//   targets: $('path').toArray(),
-//   // fill: '#fff',
-//   opacity: '0.01',
-//   // duration: 1000,
-//   // loop: true,
-//   // direction: 'alternate',
-//   easing: 'linear',
-//   delay: function(el, i, l) {
-//     return (l-i) * 10 + Math.random()*200;
-//   },
-//   // duration: 300
-//   duration: function(el, i, l) {
-//     return 100 + ((l-i) * 10);
-//   }
-// });
+	//shorter delay and longer duration - whole rows together
+	anime({
+	  targets: $('#triangle path').toArray(),
+	  opacity: '0.1',
+	  loop: true,
+	  direction: 'alternate',
+	  easing: 'easeInSine',
+	  delay: function(el, i, l) {
+	    return i * 100 + Math.random()*200;
+	  },
+	  duration: function(el, i, l) {
+	    return 10 + (i * 10);
+	  }
+	});
 </script>
