@@ -1,14 +1,14 @@
 <html>
 	<head>
 		<link href="https://fonts.googleapis.com/css?family=Comfortaa:300|Open+Sans:300,400" rel="stylesheet">
-		<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  		crossorigin="anonymous"></script>
-  		<script
-  		src="https://cdn.jsdelivr.net/npm/triangulr@1.0.0/triangulr.js"
-  		integrity="sha256-nmGk1n+BTtdh5SQ4oNtKuyfbbpvF53reG1BD2vwQROk="
-  		crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+	  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/morphext@2.4.7/dist/morphext.css">
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  		<script src="https://cdn.jsdelivr.net/npm/triangulr@1.0.0/triangulr.js" integrity="sha256-nmGk1n+BTtdh5SQ4oNtKuyfbbpvF53reG1BD2vwQROk=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/animejs@2.2.0/anime.js"></script>
-  
+	  	<script src="https://cdn.jsdelivr.net/npm/morphext@2.4.7/dist/morphext.js"></script>
+
 		<style>
 			body { 
 				margin: 0; 
@@ -46,6 +46,7 @@
 				text-align: center;
 				margin:auto;
 				color: #fff;
+				opacity: 0.6;
 			}
 			.bg-input { 
 				opacity:0.5;
@@ -154,6 +155,27 @@
 				color: #5b7990;
 				transition: none;
 			}
+			.rotate-parent {
+				padding: 0 40px;
+				display: flex;
+				font-size: 0.7em;
+				justify-content: center;
+				opacity: 0.6;
+			}
+			.rotate-left {
+				width:45%;
+				text-align:right;
+			}
+			.rotate-center {
+				width: 10%;
+			}
+			.rotate-right {
+				width: 45%;
+				text-align: left;
+			}
+			.animated {
+				animation-duration: 3s !important;
+			}
 		</style>
 	</head>
 	<body>
@@ -176,7 +198,9 @@
 		</nav>
 		<div class="top" id="triangle">
 			<div class="hero">
-				<span>vote better</span>
+				<div class="rotate-parent">
+					<div class="rotate-left js-rotating">doxa, select voting, doxa</div><div class="rotate-center">is</div> <div class="rotate-right js-rotating">select voting, prized content, prized content</div>
+				</div>
 			</div>
 
 			<div class="team">
@@ -200,15 +224,36 @@
 				<h2>Your time is valuable</h2>
 				<div class="grid">
 					<div class="grid-cell">
-						<h2> reason 1</h2>
+						<h2>Most web content is garbage</h2>
 						<p>Too much content on the web, too little time. too much content on the web (much of it clickbait, fake news, trolling) (need curation)</p>
 					</div>
 					<div class="grid-cell">
-						<h2> reason 2</h2>
+						<h2>You want to only see the best</h2>
 						<p>volunteer-based curation sites don’t scale. As community grows, quality degrades. Valuable work is under-provisioned</p>
 					</div>
 					<div class="grid-cell">
 						<h2> reason 3</h2>
+						<p>Blockchain to the rescue. Need to economically incentivize valuable labor, while also keeping it open-source, permission-less, censorship-free. Need a filter, and it needs to be trusted (non-corporate, censorship-free and permission-less) and human-based (non-AI, voting based) and spam-resistant (non-free accounts)</p>
+					</div>
+				</div>
+			</div>
+			<div class="explanation">
+				<h2>What we need</h2>
+				<div class="grid">
+					<div class="grid-cell">
+						<h2>situation 1</h2>
+						<p>Too much content on the web, too little time. too much content on the web (much of it clickbait, fake news, trolling) (need curation)</p>
+					</div>
+					<div class="grid-cell">
+						<h2> situation 2</h2>
+						<p>volunteer-based curation sites don’t scale. As community grows, quality degrades. Valuable work is under-provisioned</p>
+					</div>
+					<div class="grid-cell">
+						<h2> situation 3</h2>
+						<p>Blockchain to the rescue. Need to economically incentivize valuable labor, while also keeping it open-source, permission-less, censorship-free. Need a filter, and it needs to be trusted (non-corporate, censorship-free and permission-less) and human-based (non-AI, voting based) and spam-resistant (non-free accounts)</p>
+					</div>
+					<div class="grid-cell">
+						<h2> situation 4</h2>
 						<p>Blockchain to the rescue. Need to economically incentivize valuable labor, while also keeping it open-source, permission-less, censorship-free. Need a filter, and it needs to be trusted (non-corporate, censorship-free and permission-less) and human-based (non-AI, voting based) and spam-resistant (non-free accounts)</p>
 					</div>
 				</div>
@@ -284,4 +329,16 @@
 	    return 10 + (i * 10);
 	  }
 	});
+
+	$(".js-rotating").Morphext({
+	    animation: "fadeIn",
+	    separator: ",",
+	    speed: 3000,
+	    complete: function () {
+	    	if (this.index === this.phrases.length - 1) {
+	            this.stop();
+	        }
+	    }
+	});
+
 </script>
