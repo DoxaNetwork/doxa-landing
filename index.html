@@ -215,7 +215,7 @@
 		<div class="top" id="triangle">
 			<div class="hero">
 				<div class="rotate-parent">
-					<div class="rotate-left js-rotating">doxa, select voting, doxa</div><div class="rotate-center">is</div> <div class="rotate-right js-rotating">select voting, prized content, prized content</div>
+					<div class="rotate-left">doxa</div><div class="rotate-center">is</div> <div class="rotate-right">prized content</div>
 				</div>
 			</div>
 
@@ -340,17 +340,6 @@
 	  duration: function(el, i, l) {
 	    return 10 + ((l-i) * 10);
 	  }
-	});
-
-	$(".js-rotating").Morphext({
-	    animation: "fadeIn",
-	    separator: ",",
-	    speed: 3000,
-	    complete: function () {
-	    	if (this.index === this.phrases.length - 1) {
-	            this.stop();
-	        }
-	    }
 	});
 
 </script>
