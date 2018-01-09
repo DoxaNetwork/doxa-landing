@@ -140,8 +140,8 @@
 			svg {
 			    z-index: -5;
 			    position: relative;
-			    top: -597px;
-			    height: 842px;
+			    top: -455px;
+			    height: 700px;
 			    width: 100%;
 			    overflow: hidden;
 			}
@@ -152,6 +152,10 @@
 				top: -138px;
 				opacity: .5;
 			}
+
+			.top > svg > path {
+				opacity: 0.1;
+			} 
 			.top {
 				height: 472px;
 			}
@@ -317,7 +321,7 @@
 	  return '#'+code+'00'+'33';
 	};
 
-	var mySVG = new Triangulr (1142, 842, 120, 60, colorGenerator);
+	var mySVG = new Triangulr (1142, 700, 120, 60, colorGenerator);
 
 	var cln = mySVG.cloneNode(true);
 	document.getElementById('triangle').appendChild(mySVG);
@@ -325,8 +329,8 @@
 
 	//shorter delay and longer duration - whole rows together
 	anime({
-	  targets: $('#triangle path').toArray(),
-	  opacity: '0.1',
+	  targets: $('#triangle path').toArray().reverse(),
+	  opacity: '0.99',
 	  loop: true,
 	  direction: 'alternate',
 	  easing: 'easeInSine',
@@ -334,7 +338,7 @@
 	    return i * 100 + Math.random()*200;
 	  },
 	  duration: function(el, i, l) {
-	    return 10 + (i * 10);
+	    return 10 + ((l-i) * 10);
 	  }
 	});
 
