@@ -68,8 +68,8 @@
 			}
 
 			.hero { 
-				margin: auto; 
-				margin-top: 275px; 
+				/*margin: auto; */
+				padding-top: 275px; 
 				height: 200px; 
 				font-size: 6em; 
 				text-align: center;
@@ -165,8 +165,8 @@
 			svg {
 			    z-index: -5;
 			    position: relative;
-			    top: -455px;
-			    height: 700px;
+			    top: -763px;
+			    height: 868px;
 			    width: 100%;
 			    overflow: hidden;
 			}
@@ -182,7 +182,7 @@
 				opacity: 0.1;
 			} 
 			.top {
-				height: 472px;
+				height: 804px;
 			}
 			.right {
 				margin-right:40px;
@@ -199,6 +199,11 @@
 			.rotate-parent {
 				font-size: 0.7em;
 				opacity: 0.6;
+			}
+
+			.powered {
+				margin-top:140px;
+				width:200px;
 			}
 		</style>
 	</head>
@@ -229,8 +234,9 @@
 
 			<div class="team">
 				<span>socioeconomic media platform devoted to quality</span>
-				<!-- <span>A blockchain-based curation platform</span>
-				<span>Social media + blockchain = socioeconomic media</span> -->
+			</div>
+			<div class="team">
+				<img class="powered" src="assets/powered_by_ethereum-white.png">
 			</div>
 		</div>
 		<div class="sign-up">
@@ -348,7 +354,6 @@
 				</div>
 			</div>
 		</div>
-
 		<footer class="footer">
 			<p>About us</p>
 			<p>Team</p>
@@ -367,7 +372,7 @@
 	  return '#'+code+'00'+'33';
 	};
 
-	var mySVG = new Triangulr (1142, 700, 120, 60, colorGenerator);
+	var mySVG = new Triangulr (1142, 750, 120, 60, colorGenerator);
 
 	var cln = mySVG.cloneNode(true);
 	document.getElementById('triangle').appendChild(mySVG);
