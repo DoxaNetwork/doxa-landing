@@ -69,7 +69,7 @@
 
 			.hero { 
 				/*margin: auto; */
-				padding-top: 275px; 
+				padding-top: 225px; 
 				height: 200px; 
 				font-size: 6em; 
 				text-align: center;
@@ -91,18 +91,32 @@
 				border-radius: 2px;
 				box-shadow:0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28)
 			}
+
+			.bg-input2 {
+				color: #fff;
+				font-size:1.5em;
+				display: flex;
+				text-align: left;
+				padding: 100px 15%;
+			}
+
+			.bg-input3 {
+				padding-top:75px;
+				padding-bottom:50px;
+				height:200px;
+			}
 			.email-input { 
 				background: transparent; 
 				border: none; 
-				height: 50px; 
+				height: 55px; 
 				padding: 10px; 
 				width: 350px; 
 				color: #fff;
 				font-family: 'Open Sans', sans-serif;
-				font-size: 1.1em;
+				font-size: 1.5em;
 				text-align: center;
 				border: 2px solid #888;
-				transition: border 200ms linear;
+				/*transition: border 200ms linear;*/
 			}
 			.email-input:hover {
 				border: 2px solid #fff;
@@ -114,10 +128,10 @@
 			.email-submit { 
 				margin: 40px; 
 				padding: 0; 
-				width: 159px; 
-				height: 40px; 
+				width: 180px; 
+				height: 45px; 
 				font-family: 'Open Sans', sans-serif;
-				font-size: 1em;
+				font-size: 1.1em;
 				line-height: 1;
 				color: #ddd;
 				text-align: center; 
@@ -165,7 +179,7 @@
 			svg {
 			    z-index: -5;
 			    position: relative;
-			    top: -763px;
+			    top: -802px;
 			    height: 868px;
 			    width: 100%;
 			    overflow: hidden;
@@ -202,8 +216,26 @@
 			}
 
 			.powered {
-				margin-top:140px;
+				margin-top:100px;
 				width:200px;
+			}
+
+			.one {
+
+				width: 30%;
+			}
+			.two {
+				width: 70%;
+			}
+
+			.email-input2 {
+				background: #210033;
+				opacity:0.8;
+				border:none;
+				height:50px;
+				width:300px;
+				font-size:1.1em;
+				margin-top:60px;
 			}
 		</style>
 	</head>
@@ -233,20 +265,13 @@
 			</div>
 
 			<div class="team">
-				<span>socioeconomic media platform devoted to quality</span>
-			</div>
-			<div class="team">
-				<a href="https://www.ethereum.org/"><img class="powered" src="assets/powered_by_ethereum-white.png"></a>
-			</div>
-		</div>
-		<div class="sign-up">
-			<div class="bg-input">
-				<!-- Begin MailChimp Signup Form -->
+				<span>Doxa is socioeconomic media devoted to the highest quality</span>
+				<!-- <p>pronounced DOAKsuh</p> -->
 				<div id="mc_embed_signup">
 					<form action="https://network.us17.list-manage.com/subscribe/post?u=15732daddb657746c3ba556e0&amp;id=f79f4e37f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<div id="mc_embed_signup_scroll">
 							<div class="mc-field-group">
-								<input class="email-input" value="" type="email" name="EMAIL" placeholder="Email Address" id="mce-EMAIL"></input>
+								<input class="email-input email-input2" value="" type="email" name="EMAIL" placeholder="type your email" id="mce-EMAIL"></input>
 							</div>
 							<div id="mce-responses" class="clear">
 								<div class="response" id="mce-error-response" style="display:none"></div>
@@ -254,10 +279,22 @@
 							</div>    
 							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_15732daddb657746c3ba556e0_f79f4e37f2" tabindex="-1" value=""></div>
-							<div class="clear"><input type="submit" value="Sign up for beta" name="subscribe" id="mc-embedded-subscribe" class=" email-submit button"></div>
+							<div class="clear"></div>
 						</div>
 					</form>
 				<!--End mc_embed_signup-->
+				</div>
+			</div>
+			<div class="team">
+				<a href="https://www.ethereum.org/"><img class="powered" src="assets/powered_by_ethereum-white.png"></a>
+			</div>
+		</div>
+		<div class="sign-up">
+			<div class="bg-input bg-input2">
+				<!-- Begin MailChimp Signup Form -->
+				<div class="one"> <strong>What is Doxa?</strong></div>
+				<div class="two">
+					With Doxa your community can democratically select and broadcast the content that best represents your values, by using the Ethereum blockchain to transparently elect curators and reward quality effort.
 				</div>
 			</div>
 		</div>
@@ -280,11 +317,11 @@
 				<div class="grid">
 					<div class="grid-cell">
 						<h2>Votes are cheap</h2>
-						<p>Since votes are unlimited and free to cast, users are incentivized to vote often and lazily, instead of rarely and diligently.</p>
+						<p>Since votes are unlimited and free to cast, users are incentivized to vote often and hastily, instead of selectively and diligently.</p>
 					</div>
 					<div class="grid-cell">
 						<h2>Voting is not compensated</h2>
-						<p>Diligent voting is essential for finding the best content yet simply too much work for us to expect people to do it without adequate reward.</p>
+						<p>TODO Word this more simply. Diligent voting is essential for finding the best content yet simply too much work for us to expect people to do it without adequate reward.</p>
 					</div>
 					<div class="grid-cell">
 						<h2>Biased towards quick content</h2>
@@ -311,11 +348,11 @@
 				</div>
 			</div>
 			<div class="explanation">
-				<h1>And we can do <strong>better</strong></h1>
+				<h1>And we can do better, <strong>together</strong></h1>
 				<div class="grid">
 					<div class="grid-cell">
 						<h2>Curation instead of moderation</h2>
-						<p>Quality should be maintained not by searching for the <em>bad</em> and deleting it, but by searching for the <em>good</em> and promoting it.</p>
+						<p>positive first. confusing wording. Quality should be maintained not by searching for the <em>bad</em> and deleting it, but by searching for the <em>good</em> and promoting it.</p>
 					</div>
 					<div class="grid-cell">
 						<h2>Paid curators</h2>
