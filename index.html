@@ -98,6 +98,7 @@
 				display: flex;
 				text-align: left;
 				padding: 100px 15%;
+				height:125px;
 			}
 
 			.bg-input3 {
@@ -179,7 +180,7 @@
 			svg {
 			    z-index: -5;
 			    position: relative;
-			    top: -802px;
+			    top: -773px;
 			    height: 868px;
 			    width: 100%;
 			    overflow: hidden;
@@ -233,9 +234,44 @@
 				opacity:0.8;
 				border:none;
 				height:50px;
-				width:300px;
+				width:245px;
 				font-size:1.1em;
 				margin-top:60px;
+			}
+			.three {
+				padding: 5px;
+				    width: 391px;
+				    background: #210033;
+				    height: 51px;
+				    margin: auto;
+				    border-radius: 3px;
+				    margin-top: 20px;
+				    padding-left: 10px;
+			}
+			.four {
+				font-size:0.9em;
+				margin-top:0;
+				transition:none;
+				padding:0;
+				text-align:left;
+			}
+			.four:hover, .four:focus {
+				border:none;
+			}
+
+
+			.five {
+				border-radius:3px;
+				width:140px;
+				height:40px;
+				font-size:.8em;
+				background:#482043;
+				margin:0;
+				border:none;
+			}
+			.five:hover {
+				background:#583053;
+				border:none;
 			}
 		</style>
 	</head>
@@ -271,7 +307,10 @@
 					<form action="https://network.us17.list-manage.com/subscribe/post?u=15732daddb657746c3ba556e0&amp;id=f79f4e37f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<div id="mc_embed_signup_scroll">
 							<div class="mc-field-group">
-								<input class="email-input email-input2" value="" type="email" name="EMAIL" placeholder="type your email" id="mce-EMAIL"></input>
+								<div class="three">
+								<input class="email-input email-input2 four" value="" type="email" name="EMAIL" placeholder="Type your email" id="mce-EMAIL"></input>
+								<input type="submit" value="Sign up for beta" name="subscribe" id="mc-embedded-subscribe" class="email-submit five button">
+								</div>
 							</div>
 							<div id="mce-responses" class="clear">
 								<div class="response" id="mce-error-response" style="display:none"></div>
