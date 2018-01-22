@@ -277,6 +277,19 @@
 			.gray {
 				background-color:#f8f8f8;
 			}
+			.pronunciation {
+				font-size: 0.25em;
+				font-family: 'Open Sans', sans-serif;
+				color: #bbb;
+				position: relative;
+				left: -300px;
+				opacity: 0;
+				transition: opacity 300ms linear;
+			}
+
+			.rotate-parent:hover > .pronunciation {
+				opacity: 1
+			}
 		</style>
 	</head>
 	<body>
@@ -301,7 +314,11 @@
 			<div class="hero">
 				<div class="rotate-parent">
 					doxa is prized content
+					<div class="pronunciation">
+						pronounced DOUGHK-suh
+					</div>
 				</div>
+
 			</div>
 
 			<div class="team">
@@ -356,10 +373,10 @@
 				</div>
 			</div>
 			<div class="explanation gray">
-				<h1>Social media <strong>incentivizes</strong> cheap content</h1>
+				<h1>Current social media <strong>incentivizes</strong> cheap content</h1>
 				<div class="grid">
 					<div class="grid-cell">
-						<h2>Votes are cheap</h2>
+						<h2>Votes are too cheap</h2>
 						<p>Since votes are unlimited and free to cast, users are incentivized to vote often and hastily, instead of selectively and diligently.</p>
 					</div>
 					<div class="grid-cell">
