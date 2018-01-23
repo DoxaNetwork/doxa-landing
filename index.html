@@ -31,7 +31,6 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   		<script src="https://cdn.jsdelivr.net/npm/triangulr@1.0.0/triangulr.js" integrity="sha256-nmGk1n+BTtdh5SQ4oNtKuyfbbpvF53reG1BD2vwQROk=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/animejs@2.2.0/anime.js"></script>
-	  	<script src="https://cdn.jsdelivr.net/npm/morphext@2.4.7/dist/morphext.js"></script>
 
 		<style>
 			body { 
@@ -340,6 +339,15 @@
 				font-size: 0.65em;
 				font-weight: 400;
 			}
+
+			.copyright {
+				text-align: center;
+			}
+
+			.footer-tray {
+				display: flex;
+				justify-content: center;
+			}
 		</style>
 	</head>
 	<body>
@@ -511,11 +519,22 @@
 			</div>
 		</div>
 		<footer class="footer">
-			<p>About us</p>
-			<p>Team</p>
-			<p>FAQ</p>
-
-			Copyright © Doxa Team
+			<div class="footer-tray">
+				<div>
+					<span>Site Credits</span>
+					<ul>
+						<li><a href="http://animejs.com/">Anime</a></li>
+						<li><a href="http://maxwellito.github.io/triangulr/">Triangulr</a></li>
+					</ul>
+				</div>
+				<div>
+					Contact us
+				</div>
+			</div>
+			
+			<div class="copyright">
+				Copyright © Doxa Team
+			</div>
 		</footer>
 	</body>
 </html>
