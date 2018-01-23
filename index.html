@@ -84,8 +84,6 @@
 			}
 			.bg-input { 
 				opacity:0.5;
-				text-align: center;
-				padding: 100px;
 				height: 100px; 
 				background-color: #434; 
 				border-radius: 2px;
@@ -94,6 +92,8 @@
 
 			.bg-input2 {
 				color: #fff;
+				padding: 100px;
+				text-align: center;
 				font-size:1.5em;
 				display: flex;
 				text-align: left;
@@ -102,9 +102,10 @@
 			}
 
 			.bg-input3 {
-				padding-top:75px;
-				padding-bottom:50px;
-				height:200px;
+				display: flex;
+				padding: 60px 120px;
+				height: 200px;
+				font-family: 'Comfortaa';
 			}
 			.email-input { 
 				background: transparent; 
@@ -180,7 +181,7 @@
 			svg {
 			    z-index: -5;
 			    position: relative;
-			    top: -773px;
+			    top: -783px;
 			    height: 868px;
 			    width: 100%;
 			    overflow: hidden;
@@ -290,6 +291,55 @@
 			.rotate-parent:hover > .pronunciation {
 				opacity: 1
 			}
+
+			.interested {
+				color: #fff;
+				font-size: 1.8em;
+				width: 25%;
+				text-align: center;
+			}
+
+			.join {
+				text-align: center;
+				width: 50%;
+				color: #fff;
+			}
+
+			.join2 {
+				font-size: 1.8em;
+			}
+
+			.learn {
+				text-align: center;
+				width: 25%;
+				color: #fff;
+				font-size: 1.8em;
+			}
+
+			#mc_embed_signup_scroll {
+				margin-top: 30px;
+			}
+
+			.medium {
+				display: flex;
+				align-items: center;
+				text-decoration: none;
+				padding: 5px;
+				width: 125px;
+				height: 35px;
+				justify-content: center;
+				margin: 30px auto;
+			}
+
+			.medium > img {
+				margin-right: 10px;
+				width: 30px;
+			}
+
+			.medium > span {
+				font-size: 0.65em;
+				font-weight: 400;
+			}
 		</style>
 	</head>
 	<body>
@@ -315,7 +365,7 @@
 				<div class="rotate-parent">
 					doxa is prized content
 					<div class="pronunciation">
-						pronounced DOUGHK-suh
+						pronounced DOAK-suh
 					</div>
 				</div>
 
@@ -430,9 +480,14 @@
 			</div>
 		</div>
 		<div class="sign-up">
-			<div class="bg-input">
+			<div class="bg-input bg-input3">
+				<div class="interested">
+					<strong>Interested?</strong>
+				</div>
+
 				<!-- Begin MailChimp Signup Form -->
-				<div id="mc_embed_signup">
+				<div id="mc_embed_signup" class="join">
+			 	<span class="join2"><strong>Join us</strong></span>
 					<form action="https://network.us17.list-manage.com/subscribe/post?u=15732daddb657746c3ba556e0&amp;id=f79f4e37f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<div id="mc_embed_signup_scroll">
 							<div class="mc-field-group">
@@ -448,6 +503,10 @@
 						</div>
 					</form>
 				<!--End mc_embed_signup-->
+				</div>
+				<div class="learn">
+					<strong>Learn more</strong>
+					<a class="email-submit medium" href="https://www.ethereum.org/"><img src="assets/Monogram.svg"><span>Blog</span></a>
 				</div>
 			</div>
 		</div>
