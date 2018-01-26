@@ -160,12 +160,13 @@
 			.grid-cell {
 				width: 34%;
 				text-align: center;
+				margin-top: 15px;
 			}
 			.grid {
 				flex-wrap: wrap;
 			    display: flex;
 			    justify-content: space-around;
-			    padding-bottom: 35px;
+			    padding-bottom: 25px;
 
 			}
 			h4 {
@@ -350,14 +351,24 @@
 			.icon {
 				height: 80px;
 			}
-
 			.explanation > h1 {
 				margin: -40px;
-				margin-bottom: 50px;
+				margin-bottom: 40px;
 				color: #eee;
 				padding: 150px 80px;
+			}
+			.shadow-both {
 				box-shadow: 0 0 4px rgba(0,0,0,.14), 
 							0 4px 8px rgba(0,0,0,.28),
+							0 -4px 8px rgba(0,0,0,.28);
+			}
+			.shadow-bottom {
+				box-shadow: 0 0 4px rgba(0,0,0,.14), 
+							0 4px 8px rgba(0,0,0,.28);
+
+			}
+			.shadow-top {
+				box-shadow: 0 0 4px rgba(0,0,0,.14), 
 							0 -4px 8px rgba(0,0,0,.28);
 			}
 		</style>
@@ -430,7 +441,7 @@
 		</div>
 		<div>
 			<div class="explanation">
-				<h1 style="background-color: #2c1a3c">Current social media is not worth <strong>your time</strong></h1>
+				<h1 class="shadow-bottom" style="background-color: #2c1a3c">Current social media is not worth <strong>your time</strong></h1>
 				<div class="grid">
 					<div class="grid-cell">
 						<img class="icon" src="red_icons/SVG/Asset_14.svg">
@@ -445,7 +456,7 @@
 				</div>
 			</div>
 			<div class="explanation gray">
-				<h1 style="background-color: #823253">Current social media <strong>incentivizes</strong> cheap content</h1>
+				<h1 class="shadow-both" style="background-color: #823253">Current social media <strong>incentivizes</strong> cheap content</h1>
 				<div class="grid">
 					<div class="grid-cell">
 						<img class="icon" src="red_icons/SVG/cheap_likes.svg">
@@ -470,7 +481,7 @@
 				</div>
 			</div>
 			<div class="explanation">
-				<h1 style="background-color: #b7496b">You <strong>deserve</strong> better</h1>
+				<h1 class="shadow-both" style="background-color: #b7496b">You <strong>deserve</strong> better</h1>
 				<div class="grid">
 					<div class="grid-cell">
 						<img class="icon" src="red_icons/SVG/Asset_12.svg">
@@ -485,7 +496,7 @@
 				</div>
 			</div>
 			<div class="explanation gray">
-				<h1 style="background-color: #7E3254">And we can do better, <strong>together</strong></h1>
+				<h1 class="shadow-both" style="background-color: #7E3254">And we can do better, <strong>together</strong></h1>
 				<div class="grid">
 					<div class="grid-cell">
 						<img class="icon" src="red_icons/SVG/Asset_1.svg">
@@ -510,7 +521,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="sign-up">
+		<div class="shadow-top" class="sign-up">
 			<div class="bg-input bg-input3">
 				<div class="interested">
 					<strong>Interested?</strong>
