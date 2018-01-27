@@ -28,6 +28,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/triangulr@1.0.0/triangulr.js" integrity="sha256-nmGk1n+BTtdh5SQ4oNtKuyfbbpvF53reG1BD2vwQROk=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/animejs@2.2.0/anime.js"></script>
 		<style>
+			a { color: inherit; text-decoration: none; } 
+
 			body {
 				margin: 0;
 				padding: 0;
@@ -333,7 +335,7 @@
 				margin: -40px;
 				margin-bottom: 40px;
 				color: #eee;
-				padding: 150px 80px;
+				padding: 120px 80px;
 			}
 			.shadow-both {
 				box-shadow: 0 0 4px rgba(0,0,0,.14),
@@ -381,16 +383,16 @@
 				doxa
 			</span>
 			<span class="right">
-				Why
+				<a href="https://medium.com/the-doxa-blog">Blog</a>
 			</span>
 			<span class="right">
-				How
+				<a href="#how">How</a>
 			</span>
 			<span class="right">
-				Uses
+				<a href="#why">Why</a>
 			</span>
 			<span class="right">
-				Blog
+				<a href="#what">What</a>
 			</span>
 		</nav>
 		<div class="top" id="triangle">
@@ -430,7 +432,7 @@
 				<a href="https://www.ethereum.org/"><img class="powered" src="assets/powered_by_ethereum-white.png"></a>
 			</div>
 		</div>
-		<div class="sign-up">
+		<div id="what" class="sign-up">
 			<div class="bg-input bg-input2">
 				<!-- Begin MailChimp Signup Form -->
 				<div class="one"> <strong>What is Doxa?</strong></div>
@@ -440,7 +442,7 @@
 			</div>
 		</div>
 		<div>
-			<div class="explanation">
+			<div id="why" class="explanation">
 				<h1 class="shadow-bottom" style="background-color: #2c1a3c">Current social media is not worth <strong>your time</strong></h1>
 				<div class="grid">
 					<div class="grid-cell">
@@ -495,7 +497,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="explanation gray">
+					<div id="how" class="explanation gray">
 						<h1 class="shadow-both" style="background-color: #7E3254">And we can do better, <strong>together</strong></h1>
 						<div class="grid">
 							<div class="grid-cell">
