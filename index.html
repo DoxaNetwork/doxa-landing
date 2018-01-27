@@ -28,9 +28,19 @@
 		<script src="https://cdn.jsdelivr.net/npm/triangulr@1.0.0/triangulr.js" integrity="sha256-nmGk1n+BTtdh5SQ4oNtKuyfbbpvF53reG1BD2vwQROk=" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/animejs@2.2.0/anime.js"></script>
 		<style>
+
+		html {
+			background-color: #123;
+		}
 			a { color: inherit; text-decoration: none; } 
 
 			body {
+				margin:0;
+			}
+
+			.body {
+				position: relative;
+				z-index: -999;
 				margin: 0;
 				padding: 0;
 				font-family: 'Open Sans', sans-serif;
@@ -38,11 +48,11 @@
 				background-color: #000;
 				background: linear-gradient(to bottom right, #000033 , #880033);
 			}
-			nav {
+			.nav {
 				position: fixed;
 			top: 0px;
 			width: 100%;
-			padding: 10px 5px;
+			padding: 15px 20px;
 			line-height: 1;
 			height: 25px;
 				font-family: 'Comfortaa', cursive;
@@ -94,7 +104,7 @@
 			}
 			.bg-input3 {
 				display: flex;
-				padding: 60px 120px;
+				padding: 100px 120px;
 				height: 200px;
 				font-family: 'Comfortaa';
 			}
@@ -144,7 +154,7 @@
 			height: 150px;
 			color: #fff;
 				background-color: #123;
-			box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			/*box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);*/
 			}
 			.explanation {
 			padding: 40px;
@@ -179,9 +189,9 @@
 			width: 100%;
 			overflow: hidden;
 			}
-			nav > svg {
-				left: -5px;
-				height: 141px;
+			.nav > svg {
+				left: -20px;
+				height: 146px;
 				width: 100%;
 				top: -138px;
 				opacity: .5;
@@ -199,7 +209,7 @@
 				margin-right:40px;
 				margin-top:5px;
 				float:right;
-				font-size:.5em;
+				font-size:.55em;
 				cursor:pointer;
 				transition: color 200ms linear;
 			}
@@ -379,11 +389,13 @@
 		</style>
 	</head>
 	<body>
-		<nav id="triangle2">
+		<div class="body">
+		<nav>
+			<div class="nav" id="triangle2">
 			<span>
 				doxa
 			</span>
-			<span class="right">
+			<span style="margin-right:50px" class="right">
 				<a href="https://medium.com/the-doxa-blog">Blog</a>
 			</span>
 			<span class="right">
@@ -395,6 +407,7 @@
 			<span class="right">
 				<a href="#what">What</a>
 			</span>
+		</div>
 		</nav>
 		<div class="top" id="triangle">
 			<div class="hero">
@@ -573,6 +586,7 @@
 								Doxa Labs, San Francisco, California. Copyright © 2018 Doxa Labs. All rights reserved.
 							</div>
 						</footer>
+					</div>
 					</body>
 				</html>
 				<script>
