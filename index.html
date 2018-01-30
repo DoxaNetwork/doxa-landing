@@ -70,7 +70,6 @@
 			/* nav */
 			nav {
 				position: fixed;
-				top: 0px;
 				width: 100%;
 				padding: 15px 20px;
 				line-height: 1;
@@ -119,7 +118,7 @@
 				opacity: .5;
 				z-index: -5;
 				position: relative;
-				overflow: hidden;
+				/*overflow: hidden;*/
 			}
 			.top > svg > path {
 				opacity: 0.1;
@@ -156,12 +155,47 @@
 			}
 
 			/* email inputs */
-			
+			.email-form-container {
+				margin-top: 30px;
+			}
+			.email-input-container {
+				padding: 5px;
+				width: 391px;
+				background: #210033;
+				margin: auto;
+				border-radius: 3px;
+				padding-left: 10px;
+			}
+			.email-input-top {
+				background: #210033;
+				opacity:0.8;
+				height:50px;
+				width:245px;
+				font-size:0.9em;
+				color: #fff;
+				outline:none;
+				border:none;
+			}
+			.email-submit-top {
+				border-radius:5px;
+				width:140px;
+				height:40px;
+				font-size:.7em;
+				background:#482043;
+				padding: 0;
+				border:none;
+				color: rgba(240,240,240,0.7);
+				cursor: pointer;
+				outline: none;
+				transition: all 200ms linear;
+			}
+			.email-submit-top:hover {
+				background:#583053;
+				color: #fff
+			}
 			.email-input-bottom {
 				background: rgba(64,64,64,0.3);
-				border: none;
 				height: 55px;
-				padding: 10px;
 				width: 350px;
 				color: #fff;
 				font-size: 0.7em;
@@ -182,9 +216,7 @@
 				width: 180px;
 				height: 45px;
 				font-size: 0.5em;
-				line-height: 1;
 				color: rgba(240,240,240,0.7);
-				text-align: center;
 				cursor: pointer;
 				background-color: rgba(64,64,64,0.3);
 				border: 2px solid rgba(240,240,240,0.7);
@@ -196,55 +228,6 @@
 				border: 2px solid #fff;
 				color: #fff
 			}
-			.email-input-top {
-				background: #210033;
-				opacity:0.8;
-				border:none;
-				height:50px;
-				width:245px;
-				font-size:0.9em;
-				margin-top:0;
-				transition:none;
-				padding:0;
-				text-align:left;
-				border: none;
-				color: #fff;
-				outline:none;
-				
-			}
-			.email-input-top:hover, .email-input-top:focus {
-				border:none;
-			}
-			.email-input-container {
-				padding: 5px;
-				width: 391px;
-				background: #210033;
-				height: 51px;
-				margin: auto;
-				border-radius: 3px;
-				margin-top: 20px;
-				padding-left: 10px;
-			}
-			.email-submit-top {
-				border-radius:5px;
-				width:140px;
-				height:40px;
-				font-size:.7em;
-				background:#482043;
-				margin:0;
-				padding: 0;
-				border:none;
-				line-height: 1;
-				color: rgba(240,240,240,0.7);
-				text-align: center;
-				cursor: pointer;
-				outline: none;
-				transition: all 200ms linear;
-			}
-			.email-submit-top:hover {
-				background:#583053;
-				color: #fff
-			}
 			/* end email inputs */
 
 
@@ -252,23 +235,24 @@
 			.what {
 				opacity:0.9;
 				background-color: rgba(64,48,64,0.5);
-				border-radius: 2px;
 				color: #fff;
 				font-size:1.5em;
 				display: flex;
-				text-align: left;
 				padding: 100px 15%;
-				height:125px;
 			}
 			.explanation {
 				padding: 40px;
-				color: #000;
 				text-align: center;
 				background-color: #fff;
 			}
+			.explanation > h1 {
+				margin: -40px;
+				margin-bottom: 40px;
+				color: #fff;
+				padding: 120px 80px;
+			}
 			.grid-cell {
 				width: 34%;
-				text-align: center;
 				margin-top: 15px;
 			}
 
@@ -291,6 +275,7 @@
 			.doxa-is {
 				font-family: 'Open Sans', sans-serif;
 				width: 70%;
+				font-size:0.9em;
 			}
 
 			.join {
@@ -298,15 +283,6 @@
 				width: 50%;
 				color: #fff;
 				font-size: 1.8em;
-			}
-			#mc_embed_signup_scroll {
-				margin-top: 30px;
-			}
-			.explanation > h1 {
-				margin: -40px;
-				margin-bottom: 40px;
-				color: #fff;
-				padding: 120px 80px;
 			}
 
 			.interested {
@@ -335,7 +311,6 @@
 		        justify-content: center;
 		        margin: 30px auto;
 		        font-size: 0.7em;
-		        font-weight: 400;
 			}
 
 			.blog:hover {
@@ -360,13 +335,6 @@
 				color: #fff;
 				background-color: #123;
 			}
-			.copyright {
-				font-family: 'Open Sans', sans-serif;
-				font-size: 0.8em;
-				margin-top:45px;
-				text-align: center;
-				opacity: 0.3;
-			}
 			.social-media-icons {
 				display: flex;
 				justify-content: center;
@@ -374,31 +342,39 @@
 			.social-media-icons > img {
 				width: 25px;
 			}
-			footer  a {
+			.social-media-icons  a {
 				margin-right: 10px;
-			}
-			.contact a {
-				color: #cd8198;
-			}
-			.contact {
-				margin-top: 30px;
-				text-align: center;
-			}
-			.contact span {
-				color: #fff;
-				opacity: 0.7;
 			}
 			a:hover .social-icon {
 				opacity: 1;
 			}
 			.social-icon {
 				opacity:0.8;
+				margin-right: 10px;
+			}
+			.contact {
+				margin-top: 30px;
+				text-align: center;
+			}
+			.contact a {
+				color: #cd8198;
+			}
+			.contact span {
+				color: #fff;
+				opacity: 0.7;
+			}
+			.copyright {
+				font-family: 'Open Sans', sans-serif;
+				font-size: 0.8em;
+				margin-top:45px;
+				text-align: center;
+				opacity: 0.3;
 			}
 		</style>
 	</head>
 	<body>
 		<div class="background">
-		<nav id="triangle2">
+		<nav id="nav-triangle">
 			<span>
 				doxa
 			</span>
@@ -414,14 +390,14 @@
 				<div id="main-title">
 					doxa is prized content
 					<div class="pronunciation">
-						pronounced DOAK-suh
+						pronounced DOHK-suh
 					</div>
 				</div>
 			</div>
 			<span class="subtitle">socioeconomic media devoted to the highest quality</span>
 			<div id="mc_embed_signup">
 				<form action="https://network.us17.list-manage.com/subscribe/post?u=15732daddb657746c3ba556e0&amp;id=f79f4e37f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-					<div id="mc_embed_signup_scroll">
+					<div class="email-form-container" id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
 							<div class="email-input-container">
 								<input class="email-input-top" value="" type="email" name="EMAIL" placeholder="Type your email" id="mce-EMAIL" required></input>
@@ -537,7 +513,7 @@
 			<div id="mc_embed_signup" class="join">
 				<span><strong>Join us</strong></span>
 				<form action="https://network.us17.list-manage.com/subscribe/post?u=15732daddb657746c3ba556e0&amp;id=f79f4e37f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-					<div id="mc_embed_signup_scroll">
+					<div class="email-form-container" id="mc_embed_signup_scroll">
 						<div class="mc-field-group">
 							<input class="email-input-bottom" value="" type="email" name="EMAIL" placeholder="Email Address" id="mce-EMAIL" required></input>
 						</div>
@@ -586,7 +562,7 @@
 	var mySVG = new Triangulr (1142, 750, 120, 60, colorGenerator);
 	var cln = mySVG.cloneNode(true);
 	document.getElementById('triangle').appendChild(mySVG);
-	document.getElementById('triangle2').appendChild(cln);
+	document.getElementById('nav-triangle').appendChild(cln);
 
 	// animate the triangles
 	anime({
