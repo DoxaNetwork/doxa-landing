@@ -30,38 +30,34 @@
 		<style>
 
 			/* html elements css */
+			* { font-family: 'Comfortaa', cursive; }
 			html { background-color: #123; }
+			body { margin:0; padding:0; }
 			a { color: inherit; text-decoration: none; } 
-			body { margin:0; }
-			h1 {
-				font-family: 'Comfortaa', cursive;
-				font-weight: 300;
-			}
-			h2 {
-				font-family: 'Comfortaa', cursive;
-				font-weight: 700;
-			}
+			h1 { font-weight: 300; }
+			h2 { font-weight: 700; }
 			h4 {
 				display: inline-block;
 				width: 25%;
 			}
 			p {
+				font-family: 'Open Sans', sans-serif;
 				color: #888;
 				font-size: 0.9em;
 			}
 
 			/* general css classes */
-			.shadow-both {
-				box-shadow: 0 0 4px rgba(0,0,0,.14),
-							0 4px 8px rgba(0,0,0,.28),
-							0 -4px 8px rgba(0,0,0,.28);
-			}
 			.shadow-bottom {
 				box-shadow: 0 0 4px rgba(0,0,0,.14),
 							0 4px 8px rgba(0,0,0,.28);
 			}
 			.shadow-top {
 				box-shadow: 0 0 4px rgba(0,0,0,.14),
+							0 -4px 8px rgba(0,0,0,.28);
+			}
+			.shadow-both {
+				box-shadow: 0 0 4px rgba(0,0,0,.14),
+							0 4px 8px rgba(0,0,0,.28),
 							0 -4px 8px rgba(0,0,0,.28);
 			}
 
@@ -71,7 +67,6 @@
 				z-index: 0;
 				margin: 0;
 				padding: 0;
-				font-family: 'Open Sans', sans-serif;
 				font-weight: 300;
 				background-color: #000;
 				background: linear-gradient(to bottom right, #000033 , #880033);
@@ -86,7 +81,6 @@
 				padding: 15px 20px;
 				line-height: 1;
 				height: 25px;
-				font-family: 'Comfortaa', cursive;
 				font-size: 2em;
 				color: #fff;
 				background-color: #102334;
@@ -140,7 +134,7 @@
 
 			/* above fold */
 			.top {
-				height: 804px;
+				height: 798px;
 				font-size: 1.2em;
 				text-align: center;
 				color: #fff;
@@ -149,9 +143,12 @@
 			#main-title:hover .pronunciation {
 				opacity: 1;
 			}
+			.subtitle {
+				opacity:0.8;
+				font-size:0.9em;
+			}
 			.pronunciation {
-				font-size: 0.25em;
-				font-family: 'Open Sans', sans-serif;
+				font-size: 0.22em;
 				color: #bbb;
 				position: relative;
 				left: -300px;
@@ -162,7 +159,6 @@
 				padding-top: 225px;
 				height: 200px;
 				font-size: 3.5em;
-				font-family: 'Comfortaa', cursive;
 			}
 
 			/* email inputs */
@@ -174,8 +170,7 @@
 				padding: 10px;
 				width: 350px;
 				color: #fff;
-				font-family: 'Open Sans', sans-serif;
-				font-size: 0.8em;
+				font-size: 0.7em;
 				text-align: center;
 				border: 2px solid rgba(240,240,240,0.7);
 				transition: border 200ms linear;
@@ -192,8 +187,7 @@
 				padding: 0;
 				width: 180px;
 				height: 45px;
-				font-family: 'Open Sans', sans-serif;
-				font-size: 0.6em;
+				font-size: 0.5em;
 				line-height: 1;
 				color: rgba(240,240,240,0.7);
 				text-align: center;
@@ -222,7 +216,6 @@
 				border: none;
 				color: #fff;
 				outline:none;
-				font-family: 'Open Sans', sans-serif;
 				
 			}
 			.email-input-top:hover, .email-input-top:focus {
@@ -242,12 +235,11 @@
 				border-radius:5px;
 				width:140px;
 				height:40px;
-				font-size:.8em;
+				font-size:.7em;
 				background:#482043;
 				margin:0;
 				padding: 0;
 				border:none;
-				font-family: 'Open Sans', sans-serif;
 				line-height: 1;
 				color: rgba(240,240,240,0.7);
 				text-align: center;
@@ -303,6 +295,7 @@
 				width: 30%;
 			}
 			.doxa-is {
+				font-family: 'Open Sans', sans-serif;
 				width: 70%;
 			}
 
@@ -335,7 +328,6 @@
 				font-size: 1.8em;
 			}
 			.blog {
-				font-family: 'Open Sans', sans-serif;
 				color: rgba(240,240,240,0.7);
 				background-color: rgba(64,64,64,0.3);
 				border: 2px solid rgba(240,240,240,0.7);
@@ -364,7 +356,6 @@
 				display: flex;
 				padding: 100px 120px;
 				height: 200px;
-				font-family: 'Comfortaa';
 			}
 			/* end main section */
 			
@@ -376,6 +367,7 @@
 				background-color: #123;
 			}
 			.copyright {
+				font-family: 'Open Sans', sans-serif;
 				font-size: 0.8em;
 				margin-top:45px;
 				text-align: center;
@@ -390,7 +382,6 @@
 			}
 			footer  a {
 				margin-right: 10px;
-				text-decoration: none;
 			}
 			.contact a {
 				color: #cd8198;
@@ -435,7 +426,7 @@
 					</div>
 				</div>
 			</div>
-			<span>socioeconomic media devoted to the highest quality</span>
+			<span class="subtitle">socioeconomic media devoted to the highest quality</span>
 			<div id="mc_embed_signup">
 				<form action="https://network.us17.list-manage.com/subscribe/post?u=15732daddb657746c3ba556e0&amp;id=f79f4e37f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
 					<div id="mc_embed_signup_scroll">
