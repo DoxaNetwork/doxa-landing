@@ -32,7 +32,7 @@
 			/* html elements css */
 			* { font-family: 'Comfortaa', cursive; }
 			html { background-color: #123; }
-			body { margin:0; padding:0; }
+			body { margin:0; padding:0; font-weight: 300;}
 			a { color: inherit; text-decoration: none; } 
 			h1 { font-weight: 300; }
 			h2 { font-weight: 700; }
@@ -40,7 +40,7 @@
 				display: inline-block;
 				width: 25%;
 			}
-			p {
+			p, p * {
 				font-family: 'Open Sans', sans-serif;
 				color: #888;
 				font-size: 0.9em;
@@ -62,19 +62,13 @@
 			}
 
 			/* body */
-			.body {
-				position: relative;
-				z-index: 0;
-				margin: 0;
-				padding: 0;
-				font-weight: 300;
-				background-color: #000;
+			.background {
 				background: linear-gradient(to bottom right, #000033 , #880033);
 			}
 			/* end body */
 
 			/* nav */
-			.nav {
+			nav {
 				position: fixed;
 				top: 0px;
 				width: 100%;
@@ -88,11 +82,11 @@
 				z-index: 1;
 				user-select: none;   
 			}
-			.nav span {
+			nav span {
 				transition: color 200ms linear;
 				cursor:pointer;
 			}
-			.nav span:hover {
+			nav span:hover {
 				color: #5b7990;
 				transition: none;	
 			}
@@ -117,7 +111,7 @@
 				width: 100%;
 				overflow: hidden;
 			}
-			.nav > svg {
+			nav > svg {
 				left: -20px;
 				height: 146px;
 				width: 100%;
@@ -134,7 +128,7 @@
 
 			/* above fold */
 			.top {
-				height: 798px;
+				height: 796px;
 				font-size: 1.2em;
 				text-align: center;
 				color: #fff;
@@ -403,18 +397,16 @@
 		</style>
 	</head>
 	<body>
-		<div class="body">
-		<nav>
-			<div class="nav" id="triangle2">
-				<span>
-					doxa
-				</span>
-				<div class="nav-links">
-					<span><a href="#what">What</a></span>
-					<span><a href="#why">Why</a></span>
-					<span><a href="#how">How</a></span>
-					<span><a href="https://medium.com/the-doxa-blog">Blog</a></span>
-				</div>
+		<div class="background">
+		<nav id="triangle2">
+			<span>
+				doxa
+			</span>
+			<div class="nav-links">
+				<span><a href="#what">What</a></span>
+				<span><a href="#why">Why</a></span>
+				<span><a href="#how">How</a></span>
+				<span><a href="https://medium.com/the-doxa-blog">Blog</a></span>
 			</div>
 		</nav>
 		<div class="top" id="triangle">
