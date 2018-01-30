@@ -76,6 +76,7 @@
 				background-color: #000;
 				background: linear-gradient(to bottom right, #000033 , #880033);
 			}
+			/* end body */
 
 			/* nav */
 			.nav {
@@ -92,13 +93,68 @@
 				box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 				z-index: 1;
 			}
+			.right {
+				margin-right:40px;
+				margin-top:5px;
+				float:right;
+				font-size:.55em;
+				cursor:pointer;
+				transition: color 200ms linear;
+			}
+			.right:hover {
+				color: #5b7990;
+				transition: none;
+			}
+			/* end nav */
+
+			/* triangles */
+			#triangle > svg {
+				z-index: -5;
+				position: relative;
+				top: -783px;
+				height: 868px;
+				width: 100%;
+				overflow: hidden;
+			}
+			.nav > svg {
+				left: -20px;
+				height: 146px;
+				width: 100%;
+				top: -138px;
+				opacity: .5;
+				z-index: -5;
+				position: relative;
+				overflow: hidden;
+			}
+			.top > svg > path {
+				opacity: 0.1;
+			}
+			/* triangles */
+
+			/* above fold */
+			.top {
+				height: 804px;
+			}
+			#main-title:hover .pronunciation {
+				opacity: 1;
+			}
+			.pronunciation {
+				font-size: 0.25em;
+				font-family: 'Open Sans', sans-serif;
+				color: #bbb;
+				position: relative;
+				left: -300px;
+				opacity: 0;
+				transition: opacity 300ms linear;
+			}
 			.hero {
 				padding-top: 225px;
 				height: 200px;
-				font-size: 6em;
+				font-size: 4.2em;
 				text-align: center;
 				font-family: 'Comfortaa', cursive;
 				color: #fff;
+				opacity: 0.8;
 			}
 			.team {
 				font-size: 1.2em;
@@ -106,6 +162,8 @@
 				color: #fff;
 				opacity: 0.8;
 			}
+
+			/* email inputs */
 			.bg-inputA {
 				opacity:0.9;
 				height: 100px;
@@ -147,7 +205,7 @@
 				border: 2px solid #fff;
 			}
 			.email-input:focus {
-					outline: none;
+				outline: none;
 				border: 2px solid #fff;
 			}
 			.email-submit {
@@ -171,80 +229,6 @@
 				border: 2px solid #fff;
 				color: #fff
 			}
-			.footer {
-				padding: 40px;
-				height: 150px;
-				color: #fff;
-				background-color: #123;
-			}
-			.explanation {
-				padding: 40px;
-				color: #000;
-				text-align: center;
-				background-color: #fff;
-			}
-			.grid-cell {
-				width: 34%;
-				text-align: center;
-				margin-top: 15px;
-			}
-			.grid {
-				flex-wrap: wrap;
-				display: flex;
-				justify-content: space-around;
-				padding-bottom: 25px;
-			}
-			#triangle > svg {
-				z-index: -5;
-				position: relative;
-				top: -783px;
-				height: 868px;
-				width: 100%;
-				overflow: hidden;
-			}
-			.nav > svg {
-				left: -20px;
-				height: 146px;
-				width: 100%;
-				top: -138px;
-				opacity: .5;
-				z-index: -5;
-				position: relative;
-				overflow: hidden;
-			}
-			.top > svg > path {
-				opacity: 0.1;
-			}
-			.top {
-				height: 804px;
-			}
-			.right {
-				margin-right:40px;
-				margin-top:5px;
-				float:right;
-				font-size:.55em;
-				cursor:pointer;
-				transition: color 200ms linear;
-			}
-			.right:hover {
-				color: #5b7990;
-				transition: none;
-			}
-			.rotate-parent {
-				font-size: 0.7em;
-				opacity: 0.8;
-			}
-			.powered {
-				margin-top:100px;
-				width:200px;
-			}
-			.what-is-doxa {
-				width: 30%;
-			}
-			.doxa-is {
-				width: 70%;
-			}
-
 			.email-inputA {
 				background: #210033;
 				opacity:0.8;
@@ -295,27 +279,38 @@
 				background:#583053;
 				color: #fff
 			}
-			.gray {
-				background-color:#f8f8f8;
-			}
-			.pronunciation {
-				font-size: 0.25em;
-				font-family: 'Open Sans', sans-serif;
-				color: #bbb;
-				position: relative;
-				left: -300px;
-				opacity: 0;
-				transition: opacity 300ms linear;
-			}
-			.rotate-parent:hover > .pronunciation {
-				opacity: 1
-			}
-			.interested {
-				color: #fff;
-				font-size: 1.8em;
-				width: 25%;
+			/* end email inputs */
+
+
+			/* main section */
+			.explanation {
+				padding: 40px;
+				color: #000;
 				text-align: center;
+				background-color: #fff;
 			}
+			.grid-cell {
+				width: 34%;
+				text-align: center;
+				margin-top: 15px;
+			}
+			.grid {
+				flex-wrap: wrap;
+				display: flex;
+				justify-content: space-around;
+				padding-bottom: 25px;
+			}
+			.powered {
+				margin-top:100px;
+				width:200px;
+			}
+			.what-is-doxa {
+				width: 30%;
+			}
+			.doxa-is {
+				width: 70%;
+			}
+
 			.join {
 				text-align: center;
 				width: 50%;
@@ -324,32 +319,61 @@
 			.join2 {
 				font-size: 1.8em;
 			}
+			#mc_embed_signup_scroll {
+				margin-top: 30px;
+			}
+			.icon {
+				height: 80px;
+			}
+			.explanation > h1 {
+				margin: -40px;
+				margin-bottom: 40px;
+				color: #fff;
+				padding: 120px 80px;
+			}
+
+			.interested {
+				color: #fff;
+				font-size: 1.8em;
+				width: 25%;
+				text-align: center;
+			}
 			.learn {
 				text-align: center;
 				width: 25%;
 				color: #fff;
 				font-size: 1.8em;
 			}
-			#mc_embed_signup_scroll {
-				margin-top: 30px;
+			.blog {
+				font-family: 'Open Sans', sans-serif;
+				color: rgba(240,240,240,0.7);
+				background-color: rgba(64,64,64,0.3);
+				border: 2px solid rgba(240,240,240,0.7);
+				border-radius: 100px;
+				transition: all 200ms linear;
+		        display: flex;
+		        align-items: center;
+		        padding: 5px;
+		        width: 125px;
+		        height: 35px;
+		        justify-content: center;
+		        margin: 30px auto;
+		        font-size: 0.7em;
+		        font-weight: 400;
 			}
-			.medium {
-				display: flex;
-				align-items: center;
-				text-decoration: none;
-				padding: 5px;
-				width: 125px;
-				height: 35px;
-				justify-content: center;
-				margin: 30px auto;
+
+			.blog:hover {
+				color: #fff;
+				border: 2px solid #fff;
 			}
-			.medium > img {
-				margin-right: 10px;
-				width: 30px;
-			}
-			.medium > span {
-				font-size: 0.65em;
-				font-weight: 400;
+			/* end main section */
+			
+			/* footer */
+			.footer {
+				padding: 40px;
+				height: 150px;
+				color: #fff;
+				background-color: #123;
 			}
 			.copyright {
 				font-size: 0.8em;
@@ -360,15 +384,6 @@
 			.footer-tray {
 				display: flex;
 				justify-content: center;
-			}
-			.icon {
-				height: 80px;
-			}
-			.explanation > h1 {
-				margin: -40px;
-				margin-bottom: 40px;
-				color: #fff;
-				padding: 120px 80px;
 			}
 			.social-media-icons > img {
 				width: 25px;
@@ -420,7 +435,7 @@
 		</nav>
 		<div class="top" id="triangle">
 			<div class="hero">
-				<div class="rotate-parent">
+				<div id="main-title">
 					doxa is prized content
 					<div class="pronunciation">
 						pronounced DOAK-suh
@@ -480,7 +495,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="explanation gray">
+			<div class="explanation">
 				<h1 class="shadow-both" style="background-color: #823253">Current social media <strong>incentivizes</strong> cheap content</h1>
 				<div class="grid">
 					<div class="grid-cell">
@@ -520,7 +535,7 @@
 							</div>
 						</div>
 					</div>
-					<div id="how" class="explanation gray">
+					<div id="how" class="explanation">
 						<h1 class="shadow-both" style="background-color: #7E3254">And we can do better, <strong>together</strong></h1>
 						<div class="grid">
 							<div class="grid-cell">
@@ -572,7 +587,7 @@
 						</div>
 						<div class="learn">
 							<strong>Learn more</strong>
-							<a class="email-submit medium" href="https://www.ethereum.org/"><span>Blog</span></a>
+							<a class="blog" href="https://www.ethereum.org/"><span>Blog</span></a>
 						</div>
 					</div>
 				</div>
