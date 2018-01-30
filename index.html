@@ -159,31 +159,8 @@
 			}
 
 			/* email inputs */
-			.what {
-				opacity:0.9;
-				height: 100px;
-				background-color: rgba(64,48,64,0.5);
-				border-radius: 2px;
-				color: #fff;
-				padding: 100px;
-				text-align: center;
-				font-size:1.5em;
-				display: flex;
-				text-align: left;
-				padding: 100px 15%;
-				height:125px;
-			}
-			.bg-inputB {
-				opacity:0.9;
-				height: 100px;
-				background-color: rgba(64,48,64,0.5);
-				border-radius: 2px;
-				display: flex;
-				padding: 100px 120px;
-				height: 200px;
-				font-family: 'Comfortaa';
-			}
-			.email-input {
+			
+			.email-input-bottom {
 				background: rgba(64,64,64,0.3);
 				border: none;
 				height: 55px;
@@ -191,25 +168,25 @@
 				width: 350px;
 				color: #fff;
 				font-family: 'Open Sans', sans-serif;
-				font-size: 1.5em;
+				font-size: 0.8em;
 				text-align: center;
 				border: 2px solid rgba(240,240,240,0.7);
 				transition: border 200ms linear;
 			}
-			.email-input:hover {
+			.email-input-bottom:hover {
 				border: 2px solid #fff;
 			}
-			.email-input:focus {
+			.email-input-bottom:focus {
 				outline: none;
 				border: 2px solid #fff;
 			}
-			.email-submit {
+			.email-submit-bottom {
 				margin: 40px;
 				padding: 0;
 				width: 180px;
 				height: 45px;
 				font-family: 'Open Sans', sans-serif;
-				font-size: 1.1em;
+				font-size: 0.6em;
 				line-height: 1;
 				color: rgba(240,240,240,0.7);
 				text-align: center;
@@ -220,7 +197,7 @@
 				outline: none;
 				transition: all 200ms linear;
 			}
-			.email-submit:hover {
+			.email-submit-bottom:hover {
 				border: 2px solid #fff;
 				color: #fff
 			}
@@ -237,6 +214,7 @@
 				text-align:left;
 				border: none;
 				color: #fff;
+				outline:none;
 				font-family: 'Open Sans', sans-serif;
 				
 			}
@@ -278,6 +256,20 @@
 
 
 			/* main section */
+			.what {
+				opacity:0.9;
+				height: 100px;
+				background-color: rgba(64,48,64,0.5);
+				border-radius: 2px;
+				color: #fff;
+				padding: 100px;
+				text-align: center;
+				font-size:1.5em;
+				display: flex;
+				text-align: left;
+				padding: 100px 15%;
+				height:125px;
+			}
 			.explanation {
 				padding: 40px;
 				color: #000;
@@ -288,6 +280,10 @@
 				width: 34%;
 				text-align: center;
 				margin-top: 15px;
+			}
+
+			.grid-cell > img {
+				height: 80px;
 			}
 			.grid {
 				flex-wrap: wrap;
@@ -310,15 +306,10 @@
 				text-align: center;
 				width: 50%;
 				color: #fff;
-			}
-			.join2 {
 				font-size: 1.8em;
 			}
 			#mc_embed_signup_scroll {
 				margin-top: 30px;
-			}
-			.icon {
-				height: 80px;
 			}
 			.explanation > h1 {
 				margin: -40px;
@@ -360,6 +351,16 @@
 			.blog:hover {
 				color: #fff;
 				border: 2px solid #fff;
+			}
+			.get-involved {
+				opacity:0.9;
+				height: 100px;
+				background-color: rgba(64,48,64,0.5);
+				border-radius: 2px;
+				display: flex;
+				padding: 100px 120px;
+				height: 200px;
+				font-family: 'Comfortaa';
 			}
 			/* end main section */
 			
@@ -458,7 +459,9 @@
 				</form>
 				<!--End mc_embed_signup-->
 			</div>
-			<a href="https://www.ethereum.org/"><img class="powered-by-ethereum" src="assets/powered_by_ethereum-white.png"></a>
+			<a href="https://www.ethereum.org/">
+				<img class="powered-by-ethereum" src="assets/powered_by_ethereum-white.png">
+			</a>
 		</div>
 		<div id="what" class="what">
 			<div class="what-is-doxa"> <strong>What is Doxa?</strong></div>
@@ -466,118 +469,114 @@
 				With Doxa your community can democratically select and broadcast the content that best represents your values, by using the Ethereum blockchain to transparently elect curators and reward quality effort.
 			</div>
 		</div>
-		<div>
-			<div id="why" class="explanation">
-				<h1 class="shadow-bottom" style="background-color: #2c1a3c">Current social media is not worth <strong>your time</strong></h1>
-				<div class="grid">
-					<div class="grid-cell">
-						<img class="icon" src="red_icons/SVG/Asset_14.svg">
-						<h2>Overrun by cheap content</h2>
-						<p>Freeing all people to be writers is a good thing, but inundating readers with low-quality content is not.</p>
-					</div>
-					<div class="grid-cell">
-						<img class="icon" src="red_icons/SVG/Asset_11.svg">
-						<h2>Your effort is not rewarded</h2>
-						<p>Our efforts as creators, commenters, and readers have turned these sites into billion dollar companies, yet how many dollars have you received for your work?</p>
-					</div>
+		<div id="why" class="explanation">
+			<h1 class="shadow-bottom" style="background-color: #2c1a3c">Current social media is not worth <strong>your time</strong></h1>
+			<div class="grid">
+				<div class="grid-cell">
+					<img src="red_icons/SVG/Asset_14.svg">
+					<h2>Overrun by cheap content</h2>
+					<p>Freeing all people to be writers is a good thing, but inundating readers with low-quality content is not.</p>
+				</div>
+				<div class="grid-cell">
+					<img src="red_icons/SVG/Asset_11.svg">
+					<h2>Your effort is not rewarded</h2>
+					<p>Our efforts as creators, commenters, and readers have turned these sites into billion dollar companies, yet how many dollars have you received for your work?</p>
 				</div>
 			</div>
-			<div class="explanation">
-				<h1 class="shadow-both" style="background-color: #823253">Current social media <strong>incentivizes</strong> cheap content</h1>
-				<div class="grid">
-					<div class="grid-cell">
-						<img class="icon" src="red_icons/SVG/cheap_likes.svg">
-						<h2>Votes are too cheap</h2>
-						<p>Since votes are unlimited and free to cast, users are incentivized to vote often and hastily, instead of selectively and diligently.</p>
-					</div>
-					<div class="grid-cell">
-						<img class="icon" src="red_icons/SVG/gamification.svg">
-						<h2>Voting is not compensated</h2>
-						<p>TODO Word this more simply. Diligent voting is essential for finding the best content yet simply too much work for us to expect people to do it without adequate reward.</p>
-					</div>
-					<div class="grid-cell">
-						<img class="icon" src="red_icons/SVG/Asset_7.svg">
-						<h2>Biased towards quick content</h2>
-						<p>Immediate conversion of votes into visibility means what you see is not the best, but the earliest.
-						</div>
-						<div class="grid-cell">
-							<img class="icon" src="red_icons/SVG/Asset_6.svg">
-							<h2>Community members lack control</h2>
-							<p>Critical decisions about these platforms are not made by the users who want quality, but by corporations who want to sell advertisements.</p>
-						</div>
-					</div>
+		</div>
+		<div class="explanation">
+			<h1 class="shadow-both" style="background-color: #823253">Current social media <strong>incentivizes</strong> cheap content</h1>
+			<div class="grid">
+				<div class="grid-cell">
+					<img src="red_icons/SVG/cheap_likes.svg">
+					<h2>Votes are too cheap</h2>
+					<p>Since votes are unlimited and free to cast, users are incentivized to vote often and hastily, instead of selectively and diligently.</p>
 				</div>
-				<div class="explanation">
-					<h1 class="shadow-both" style="background-color: #b7496b">You <strong>deserve</strong> better</h1>
-					<div class="grid">
-						<div class="grid-cell">
-							<img class="icon" src="red_icons/SVG/Asset_12.svg">
-							<h2>Your time is valuable</h2>
-							<p>You have only limited time, yet there is practically unlimited content on the web. You want to know if something is worth your time <em>before</em> you invest your time into it.<p>
-							</div>
-							<div class="grid-cell">
-								<img class="icon" src="red_icons/SVG/Asset_15.svg">
-								<h2>Your effort is valuable</h2>
-								<p>In a world full of low-effort and misleading content, finding the best content is hard work. You want to be paid for that effort, or to pay others <em>whom you trust</em> to do it well.</p>
-							</div>
-						</div>
-					</div>
-					<div id="how" class="explanation">
-						<h1 class="shadow-both" style="background-color: #7E3254">And we can do better, <strong>together</strong></h1>
-						<div class="grid">
-							<div class="grid-cell">
-								<img class="icon" src="red_icons/SVG/Asset_1.svg">
-								<h2>Curation instead of moderation</h2>
-								<p>positive first. confusing wording. Quality should be maintained not by searching for the <em>bad</em> and deleting it, but by searching for the <em>good</em> and promoting it.</p>
-							</div>
-							<div class="grid-cell">
-								<img class="icon" src="red_icons/SVG/Asset_8.svg">
-								<h2>Paid curators</h2>
-								<p>Instead of each of us casting <em>shallow</em> votes, a trusted few should perform the effort of voting <em>deeply</em>, and be paid for their effort. Deep votes are quality votes, and quality votes ensure quality content.</p>
-							</div>
-							<div class="grid-cell">
-								<img class="icon" src="red_icons/SVG/Asset_17.svg">
-								<h2>Members own the platform</h2>
-								<p>Members are able to both make the important decisions and directly share in the profit from the growth and success of their communities.</p>
-							</div>
-							<div class="grid-cell">
-								<img class="icon" src="red_icons/SVG/Asset_13.svg">
-								<h2>Elected curators</h2>
-								<p>Curation is a powerful role, so it must be held accountable via elections powered by dynamic and continous voting, all transparently recorded on the blockchain.</p>
-							</div>
-						</div>
-					</div>
+				<div class="grid-cell">
+					<img src="red_icons/SVG/gamification.svg">
+					<h2>Voting is not compensated</h2>
+					<p>TODO Word this more simply. Diligent voting is essential for finding the best content yet simply too much work for us to expect people to do it without adequate reward.</p>
 				</div>
-				<div class="shadow-top">
-					<div class="bg-inputB">
-						<div class="interested">
-							<strong>Interested?</strong>
-						</div>
-						<!-- Begin MailChimp Signup Form -->
-						<div id="mc_embed_signup" class="join">
-							<span class="join2"><strong>Join us</strong></span>
-							<form action="https://network.us17.list-manage.com/subscribe/post?u=15732daddb657746c3ba556e0&amp;id=f79f4e37f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-								<div id="mc_embed_signup_scroll">
-									<div class="mc-field-group">
-										<input class="email-input" value="" type="email" name="EMAIL" placeholder="Email Address" id="mce-EMAIL" required></input>
-									</div>
-									<div id="mce-responses" class="clear">
-										<div class="response" id="mce-error-response" style="display:none"></div>
-										<div class="response" id="mce-success-response" style="display:none"></div>
-									</div>
-									<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-									<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_15732daddb657746c3ba556e0_f79f4e37f2" tabindex="-1" value=""></div>
-									<div class="clear"><input type="submit" value="Sign up for beta" name="subscribe" id="mc-embedded-subscribe" class="email-submit"></div>
-								</div>
-							</form>
-							<!--End mc_embed_signup-->
-						</div>
-						<div class="learn">
-							<strong>Learn more</strong>
-							<a class="blog" href="https://www.ethereum.org/"><span>Blog</span></a>
-						</div>
-					</div>
+				<div class="grid-cell">
+					<img src="red_icons/SVG/Asset_7.svg">
+					<h2>Biased towards quick content</h2>
+					<p>Immediate conversion of votes into visibility means what you see is not the best, but the earliest.
 				</div>
+				<div class="grid-cell">
+					<img src="red_icons/SVG/Asset_6.svg">
+					<h2>Community members lack control</h2>
+					<p>Critical decisions about these platforms are not made by the users who want quality, but by corporations who want to sell advertisements.</p>
+				</div>
+			</div>
+		</div>
+		<div class="explanation">
+			<h1 class="shadow-both" style="background-color: #b7496b">You <strong>deserve</strong> better</h1>
+			<div class="grid">
+				<div class="grid-cell">
+					<img src="red_icons/SVG/Asset_12.svg">
+					<h2>Your time is valuable</h2>
+					<p>You have only limited time, yet there is practically unlimited content on the web. You want to know if something is worth your time <em>before</em> you invest your time into it.<p>
+				</div>
+				<div class="grid-cell">
+					<img src="red_icons/SVG/Asset_15.svg">
+					<h2>Your effort is valuable</h2>
+					<p>In a world full of low-effort and misleading content, finding the best content is hard work. You want to be paid for that effort, or to pay others <em>whom you trust</em> to do it well.</p>
+				</div>
+			</div>
+		</div>
+		<div id="how" class="explanation">
+			<h1 class="shadow-both" style="background-color: #7E3254">And we can do better, <strong>together</strong></h1>
+			<div class="grid">
+				<div class="grid-cell">
+					<img src="red_icons/SVG/Asset_1.svg">
+					<h2>Curation instead of moderation</h2>
+					<p>positive first. confusing wording. Quality should be maintained not by searching for the <em>bad</em> and deleting it, but by searching for the <em>good</em> and promoting it.</p>
+				</div>
+				<div class="grid-cell">
+					<img src="red_icons/SVG/Asset_8.svg">
+					<h2>Paid curators</h2>
+					<p>Instead of each of us casting <em>shallow</em> votes, a trusted few should perform the effort of voting <em>deeply</em>, and be paid for their effort. Deep votes are quality votes, and quality votes ensure quality content.</p>
+				</div>
+				<div class="grid-cell">
+					<img src="red_icons/SVG/Asset_17.svg">
+					<h2>Members own the platform</h2>
+					<p>Members are able to both make the important decisions and directly share in the profit from the growth and success of their communities.</p>
+				</div>
+				<div class="grid-cell">
+					<img src="red_icons/SVG/Asset_13.svg">
+					<h2>Elected curators</h2>
+					<p>Curation is a powerful role, so it must be held accountable via elections powered by dynamic and continous voting, all transparently recorded on the blockchain.</p>
+				</div>
+			</div>
+		</div>
+		<div class="get-involved shadow-top">
+			<div class="interested">
+				<strong>Interested?</strong>
+			</div>
+			<!-- Begin MailChimp Signup Form -->
+			<div id="mc_embed_signup" class="join">
+				<span><strong>Join us</strong></span>
+				<form action="https://network.us17.list-manage.com/subscribe/post?u=15732daddb657746c3ba556e0&amp;id=f79f4e37f2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+					<div id="mc_embed_signup_scroll">
+						<div class="mc-field-group">
+							<input class="email-input-bottom" value="" type="email" name="EMAIL" placeholder="Email Address" id="mce-EMAIL" required></input>
+						</div>
+						<div id="mce-responses" class="clear">
+							<div class="response" id="mce-error-response" style="display:none"></div>
+							<div class="response" id="mce-success-response" style="display:none"></div>
+						</div>
+						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_15732daddb657746c3ba556e0_f79f4e37f2" tabindex="-1" value=""></div>
+						<div class="clear"><input type="submit" value="Sign up for beta" name="subscribe" id="mc-embedded-subscribe" class="email-submit-bottom"></div>
+					</div>
+				</form>
+				<!--End mc_embed_signup-->
+			</div>
+			<div class="learn">
+				<strong>Learn more</strong>
+				<a class="blog" href="https://www.ethereum.org/"><span>Blog</span></a>
+			</div>
+		</div>
 				<footer class="footer">
 					<div class="footer-tray">
 						
