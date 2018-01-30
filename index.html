@@ -92,18 +92,25 @@
 				background-color: #102334;
 				box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 				z-index: 1;
+				user-select: none;   
 			}
-			.right {
+			.nav span {
+				transition: color 200ms linear;
+				cursor:pointer;
+			}
+			.nav span:hover {
+				color: #5b7990;
+				transition: none;	
+			}
+			.nav-links {
+				display: flex;
+				float: right;
+				margin-right: 20px;
+			}
+			.nav-links span {
 				margin-right:40px;
 				margin-top:5px;
-				float:right;
 				font-size:.55em;
-				cursor:pointer;
-				transition: color 200ms linear;
-			}
-			.right:hover {
-				color: #5b7990;
-				transition: none;
 			}
 			/* end nav */
 
@@ -258,12 +265,9 @@
 			/* main section */
 			.what {
 				opacity:0.9;
-				height: 100px;
 				background-color: rgba(64,48,64,0.5);
 				border-radius: 2px;
 				color: #fff;
-				padding: 100px;
-				text-align: center;
 				font-size:1.5em;
 				display: flex;
 				text-align: left;
@@ -411,22 +415,16 @@
 		<div class="body">
 		<nav>
 			<div class="nav" id="triangle2">
-			<span>
-				doxa
-			</span>
-			<span style="margin-right:50px" class="right">
-				<a href="https://medium.com/the-doxa-blog">Blog</a>
-			</span>
-			<span class="right">
-				<a href="#how">How</a>
-			</span>
-			<span class="right">
-				<a href="#why">Why</a>
-			</span>
-			<span class="right">
-				<a href="#what">What</a>
-			</span>
-		</div>
+				<span>
+					doxa
+				</span>
+				<div class="nav-links">
+					<span><a href="#what">What</a></span>
+					<span><a href="#why">Why</a></span>
+					<span><a href="#how">How</a></span>
+					<span><a href="https://medium.com/the-doxa-blog">Blog</a></span>
+				</div>
+			</div>
 		</nav>
 		<div class="top" id="triangle">
 			<div class="hero">
@@ -573,7 +571,7 @@
 			<!--End mc_embed_signup-->
 			<div class="learn">
 				<strong>Learn more</strong>
-				<a class="blog" href="https://www.ethereum.org/"><span>Blog</span></a>
+				<a class="blog" href="https://medium.com/the-doxa-blog"><span>Blog</span></a>
 			</div>
 		</div>
 		<footer>
