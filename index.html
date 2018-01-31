@@ -96,7 +96,6 @@
 				float: right;
 				margin-right: 20px;
 
-				display: none;
 			}
 			.nav-links span {
 				margin-right:40px;
@@ -108,11 +107,11 @@
 			/* triangles */
 			#triangle > svg {
 				z-index: -5;
-				position: relative;
-				top: -783px;
-				height: 868px;
-				width: 100%;
-				overflow: hidden;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				height: 100%;
+				width:100%;
 			}
 			nav > svg {
 				left: -20px;
@@ -122,7 +121,6 @@
 				opacity: .5;
 				z-index: -5;
 				position: relative;
-				/*overflow: hidden;*/
 			}
 			.top > svg > path {
 				opacity: 0.1;
@@ -136,6 +134,8 @@
 				text-align: center;
 				color: #fff;
 				opacity: 0.8;
+
+				position: relative;
 			}
 			#main-title:hover .pronunciation {
 				opacity: 1;
@@ -600,26 +600,44 @@
 	var colorGenerator = function (path) {
 		var random = 20;
 		var ratio = (path.x * path.y) / (path.cols * path.lines);
-		var code = Math.floor(16 + (ratio * (256-random)) + Math.random()*random).toString(16);
-		return '#'+code+'00'+'33';
+		var code = Math.min(255, Math.floor(16 + (1.5*ratio * (256-random)) + Math.random()*random));
+		return '#'+code.toString(16)+'00'+'33';
 	};
-	var mySVG = new Triangulr (1142, 750, 120, 60, colorGenerator);
+	var mySVG = new Triangulr (screen.width, screen.height, 120, 55, colorGenerator);
+	mySVG.setAttribute('viewBox', `0 -20 ${screen.width} ${screen.height}`);
 	var cln = mySVG.cloneNode(true);
 	document.getElementById('triangle').appendChild(mySVG);
 	document.getElementById('nav-triangle').appendChild(cln);
 
 	// animate the triangles
-	anime({
-		targets: $('#triangle path').toArray().reverse(),
-		opacity: '0.99',
-		loop: true,
-		direction: 'alternate',
-		easing: 'easeInSine',
-		delay: function(el, i, l) {
-		return i * 100 + Math.random()*200;
-		},
-		duration: function(el, i, l) {
-		return 10 + ((l-i) * 10);
-		}
-	});
+	if(screen.width < 400 ) {
+		console.log('mobile');
+		anime({
+			targets: $('#triangle path').toArray().reverse(),
+			opacity: '0.99',
+			loop: true,
+			direction: 'alternate',
+			easing: 'easeInSine',
+			delay: function(el, i, l) {
+			return i * 150 + Math.random()*200;
+			},
+			duration: function(el, i, l) {
+			return 10 + ((l-i) * 20);
+			}
+		});
+	} else {
+		anime({
+			targets: $('#triangle path').toArray().reverse(),
+			opacity: '0.99',
+			loop: true,
+			direction: 'alternate',
+			easing: 'easeInSine',
+			delay: function(el, i, l) {
+			return i * 75 + Math.random()*200;
+			},
+			duration: function(el, i, l) {
+			return 10 + ((l-i) * 7);
+			}
+		});
+	}
 </script>
