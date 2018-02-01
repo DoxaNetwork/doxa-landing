@@ -170,7 +170,7 @@
 				font-size: 0.22em;
 				color: #bbb;
 				position: relative;
-				left: -300px;
+				left: -255px;
 				opacity: 0;
 				transition: opacity 300ms linear;
 			}
@@ -215,23 +215,21 @@
 			    .email-input-top {
 			        width: 245px;
 			    }
-
 			    .grid-cell {
 			    	width: 34%;
 			    }
-
 			    .doxa-is {
 			    	width: 70%;
-			    	/*text-align: left;*/
 			    }
-
 			    .what-is-doxa {
 			    	width: 30%;
 			    }
-
 			    .hero {
 			    	font-size: 3em;
 			    }
+			    .explanation > h1 {
+					padding: 120px 80px;
+				}
 			}
 
 			/* mobile rules */
@@ -239,10 +237,12 @@
 				.doxa-is {
 					text-align: center;
 				}
+				.explanation > h1 {
+					padding: 80px 20px;
+				}
 			}
 			.email-submit-top {
 				border-radius: 3px;
-				/*width:140px;*/
 				height:40px;
 				font-size:.7em;
 				background:#482043;
@@ -260,7 +260,7 @@
 			.email-input-bottom {
 				background: rgba(64,64,64,0.3);
 				height: 55px;
-				width: 350px;
+				/*width: 350px;*/
 				color: #fff;
 				font-size: 0.7em;
 				text-align: center;
@@ -304,63 +304,43 @@
 				color: #fff;
 				font-size:1.5em;
 				display: flex;
-				padding: 100px 15%;
-
 				flex-wrap: wrap;
+				padding: 100px 15%;
 				padding: 70px 10%;
 			}
 			.what-is-doxa {
-				/*width: 30%;*/
-
-				/*width: unset;*/
 				margin-bottom: 30px;
 				margin: 0 auto 30px;
 			}
 			.doxa-is {
 				font-family: 'Open Sans', sans-serif;
-				/*width: 70%;*/
-				/*font-size:0.9em;*/
-
 				font-size: 0.8em;
-				/*width:unset;*/
-				/*text-align: center;*/
 			}
 			.explanation {
-				padding: 40px;
 				text-align: center;
 				background-color: #fff;
 			}
 			.explanation > h1 {
-				margin: -40px;
-				margin-bottom: 40px;
+				margin: 0;
 				color: #fff;
-				padding: 120px 80px;
 			}
 			.grid-cell {
-				/*width: 34%;*/
 				margin-top: 15px;
-
-				/*width: unset;*/
 			}
 
 			.grid-cell > img {
 				height: 80px;
 			}
 			.grid {
-				flex-wrap: wrap;
 				display: flex;
 				justify-content: space-around;
-				padding-bottom: 25px;
-
 				flex-wrap: wrap;
+				padding: 40px 40px 60px;
 			}
 			.powered-by-ethereum {
 				margin-top:100px;
-				width:200px;
-
 				width: 175px;
 			}
-
 			.join {
 				text-align: center;
 				width: 50%;
@@ -427,11 +407,8 @@
 			/* footer */
 			footer {
 				padding: 25px;
-				height: 150px;
 				color: #fff;
 				background-color: #123;
-
-				height: unset;
 			}
 			.social-media-icons {
 				display: flex;
