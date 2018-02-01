@@ -105,21 +105,33 @@
 			.nav-text {
 				height: 100%;
 				display: flex;
-				justify-content: center;
 				align-items: center;
+				justify-content: space-between;
+				padding: 0 25px;
 			}
 			.nav-links {
 				display: flex;
-				float: right;
-				margin-right: 20px;
-
-				display: none;
-
 			}
 			.nav-links span {
-				margin-right:40px;
+				margin-left:40px;
 				margin-top:5px;
 				font-size:.55em;
+			}
+
+			.nav-links-mobile {
+				position: absolute;
+				right: 0;
+				width: 110px;
+				padding: 10px 20px;
+				font-size: 0.7em;
+				line-height: 1.5;
+				box-sizing: border-box;
+				background-color: rgb(70, 27, 64);
+				display: none;
+			}
+
+			.nav-menu {
+				width:25px;
 			}
 			/* end nav */
 
@@ -230,6 +242,10 @@
 			    .explanation > h1 {
 					padding: 120px 80px;
 				}
+
+				.nav-menu {
+					display: none;
+				}
 			}
 
 			/* mobile rules */
@@ -242,6 +258,13 @@
 				}
 				.hero {
 					padding-top: 150px;
+				}
+
+				.nav-links {
+					display: none;
+				}
+				.pronunciation {
+					display: none;
 				}
 			}
 			.email-submit-top {
@@ -456,6 +479,7 @@
 			<div id="nav-triangle"></div>
 			<div class="nav-text">
 				<span><a href="index.html">doxa</a></span>
+				<span class="nav-menu"><img src="assets/menu.svg"></span>	
 				<div class="nav-links">
 					<span><a href="#what">What</a></span>
 					<span><a href="#why">Why</a></span>
@@ -463,6 +487,12 @@
 					<span><a href="https://medium.com/the-doxa-blog">Blog</a></span>
 				</div>
 			</div>
+			<div class="nav-links-mobile">
+					<div><span><a href="#what">What</a></span></div>
+					<div><span><a href="#why">Why</a></span></div>
+					<div><span><a href="#how">How</a></span></div>
+					<div><span><a href="https://medium.com/the-doxa-blog">Blog</a></span></div>
+				</div>
 		</nav>
 		<div class="top" id="triangle">
 			<div class="hero">
@@ -675,4 +705,8 @@
 			}
 		});
 	}
+
+	$('.nav-menu').click(function() {
+		$('.nav-links-mobile').toggle();
+	})
 </script>
