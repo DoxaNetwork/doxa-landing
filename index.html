@@ -169,23 +169,16 @@
 				text-align: center;
 				color: #fff;
 				opacity: 0.8;
-
 				position: relative;
-			}
-			#main-title:hover .pronunciation {
-				opacity: 1;
 			}
 			.subtitle {
 				opacity:0.8;
 				font-size:0.9em;
 			}
 			.pronunciation {
-				font-size: 0.22em;
 				color: #bbb;
-				position: relative;
-				left: -255px;
-				opacity: 0;
-				transition: opacity 300ms linear;
+				font-size: 0.5em;
+				margin-top:5px;
 			}
 			.hero {
 				height: 200px;
@@ -231,7 +224,7 @@
 			    	width: 34%;
 			    }
 			    .doxa-is {
-			    	width: 70%;
+			    	width: 65%;
 			    }
 			    .what-is-doxa {
 			    	width: 30%;
@@ -270,9 +263,6 @@
 				}
 
 				.nav-links {
-					display: none;
-				}
-				.pronunciation {
 					display: none;
 				}
 				.get-involved {
@@ -343,12 +333,12 @@
 				font-size:1.5em;
 				display: flex;
 				flex-wrap: wrap;
-				padding: 100px 15%;
 				padding: 70px 10%;
 			}
 			.what-is-doxa {
-				margin-bottom: 30px;
 				margin: 0 auto 30px;
+				min-width:175px;
+				text-align: center;
 			}
 			.doxa-is {
 				font-family: 'Open Sans', sans-serif;
@@ -508,12 +498,7 @@
 		</nav>
 		<div class="top" id="triangle">
 			<div class="hero">
-				<div id="main-title">
-					doxa is prized content
-					<div class="pronunciation">
-						pronounced DOHK-suh
-					</div>
-				</div>
+				doxa is prized content
 			</div>
 			<span class="subtitle">socioeconomic media devoted to the highest quality</span>
 			<div id="mc_embed_signup">
@@ -541,7 +526,12 @@
 			</a>
 		</div>
 		<div id="what" class="what">
-			<div class="what-is-doxa"> <strong>What is Doxa?</strong></div>
+			<div class="what-is-doxa"> 
+				<strong>What is Doxa?</strong>
+				<div class="pronunciation">
+					pronounced DOHK-suh
+				</div>
+			</div>
 			<div class="doxa-is">
 				With Doxa your community can democratically select and broadcast the content that best represents your values, by using the Ethereum blockchain to transparently elect curators and reward quality effort.
 			</div>
