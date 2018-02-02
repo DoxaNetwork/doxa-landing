@@ -672,14 +672,17 @@
 		var code = Math.min(255, Math.floor(16 + (1.5*ratio * (256-random)) + Math.random()*random));
 		return '#'+code.toString(16)+'00'+'33';
 	};
-	var mySVG = new Triangulr (screen.width, screen.height, 120, 55, colorGenerator);
-	mySVG.setAttribute('viewBox', `0 -20 ${screen.width} ${screen.height}`);
+
+	const height = $('.top').height();
+	const width = $('.top').width();
+	var mySVG = new Triangulr (width, height, 120, 55, colorGenerator);
+	mySVG.setAttribute('viewBox', `0 -20 ${width} ${height}`);
 	var cln = mySVG.cloneNode(true);
 	document.getElementById('triangle').appendChild(mySVG);
 	document.getElementById('nav-triangle').appendChild(cln);
 
 	// animate the triangles
-	if(screen.width < 400 ) {
+	if(width < 500 ) {
 		anime({
 			targets: $('#triangle path').toArray().reverse(),
 			opacity: '0.99',
