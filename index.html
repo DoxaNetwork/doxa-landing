@@ -121,7 +121,7 @@
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				padding: 0 25px;
+				padding: 0 25px 0 10px;
 			}
 			.nav-links {
 				display: flex;
@@ -199,9 +199,13 @@
 				font-size: 0.5em;
 				margin-top:5px;
 			}
-			.hero {
-				height: 200px;
+			.hero1 {
+				height: 100px;
 				font-size: 2.5em;
+			}
+			.hero2 {
+				height: 125px;
+				font-size: 1.5em;
 			}
 
 			/* email inputs */
@@ -444,9 +448,11 @@
 			    .what-is-doxa {
 			    	width: 30%;
 			    }
-			    .hero {
+			    .hero1 {
 			    	font-size: 3em;
-			    	padding-top:225px;
+			    }
+			    .hero2 {
+			    	font-size: 1.8em;
 			    }
 			    .explanation > h1 {
 					padding: 120px 80px;
@@ -466,15 +472,41 @@
 				.explanation > h1 {
 					padding: 80px 20px;
 				}
-				.hero {
-					padding-top: 150px;
-				}
 				.nav-links {
 					display: none;
 				}
 				.email-input-container {
 					width: 92%;
 				}
+			}
+
+			/* Logos */
+			.nav-logo-container {
+				display: flex;
+				align-items: center;
+				user-select: none; 
+			}
+			.nav-logo-container > div {
+				padding: 8px 10px 0 0;
+			}
+			.nav-logo {
+				width: 25px;
+			}
+			.logo-left {
+				position: relative;
+				transform: rotate(-90deg);
+				left: 11px;
+			}
+			.logo-right {
+				position: relative;
+				transform: rotate(90deg);
+			}
+			.hero-logo-container {
+				padding-top: 150px;
+				user-select: none; 
+			}
+			.hero-logo {
+				width:50px;
 			}
 		</style>
 	</head>
@@ -483,7 +515,13 @@
 		<nav>
 			<div id="nav-triangle"></div>
 			<div class="nav-text">
-				<span><a href="index.html">doxa</a></span>
+				<div class="nav-logo-container">
+					<div>
+						<img class="nav-logo logo-left" src="assets/Doxa-Logo-SimpleGrey.png">
+						<img class="nav-logo logo-right" src="assets/Doxa-Logo-SimpleGrey.png">
+					</div>
+					<span><a href="index.html">dōxa</a></span>
+				</div>
 				<span class="nav-menu"><img src="assets/menu.svg"></span>
 				<span class="nav-menu" style="display: none;"><img src="assets/close.svg"></span>
 				<div class="nav-links">
@@ -501,8 +539,15 @@
 			</div>
 		</nav>
 		<div class="top" id="triangle">
-			<div class="hero">
-				doxa is prized content
+			<div class="hero-logo-container">
+				<img class="hero-logo logo-left" src="assets/Doxa-Logo-SimpleGrey.png">
+				<img class="hero-logo logo-right" src="assets/Doxa-Logo-SimpleGrey.png">
+			</div>
+			<div class="hero1">
+				dōxa
+			</div>
+			<div class="hero2">
+				communal content vetting
 			</div>
 			<span class="subtitle">incentivized social media devoted to the highest quality</span>
 			<div id="mc_embed_signup">
